@@ -1,0 +1,450 @@
+.app-header-container {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 998;
+
+  .app-header {
+    height: 130px;
+    min-height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+
+    .header-link-left-container {
+      background: $dark-gray;
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 0%);
+      display: flex;
+      padding-left: 40px;
+      transition: all 0.4s;
+      cursor: pointer;
+
+      .header-link {
+        color:white;
+        font-weight: bold;
+        width: 100%;
+        transform: rotate(-33deg);
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:hover {
+        background: $secondary;
+
+        .header-link {
+          color: black;
+        }
+      }
+
+      .sign-up-container {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+
+        .sign-up-title {
+          display: block;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+          width: 100%;
+          text-align: center;
+          font-family: $oswald;
+          pointer-events: none;
+        }
+
+        .sign-up-close {
+          cursor: pointer;
+          padding: 6px;
+          border: 2px solid $dark-gray;
+          border-radius: 100%;
+          font-weight: bold;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $secondary;
+          transition: all 0.3s;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          color: $dark-gray;
+          pointer-events: all;
+
+          &:hover {
+            color: $secondary;
+            border-color: $dark-gray;
+            background: $dark-gray;
+          }
+        }
+
+        .sign-up-form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .sign-up-input {
+            height: 2.5rem;
+            margin-bottom: 1rem;
+            padding-left: 10px;
+          }
+        }
+
+        .submit-button {
+          background: $dark-gray;
+          border: 1px solid $dark-gray;
+          color: white;
+          height: 2rem;
+          width: 100%;
+          margin-top: 2rem;
+          cursor: pointer;
+          font-family: $oswald;
+        }
+
+        .user-agreement-span {
+          font-size: 10px;
+          height: 1rem;
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
+
+        #signup-button {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .header-link-right-container {
+      background: $dark-gray;
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+      display: flex;
+      padding-right: 50px;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      .header-link {
+        color: white;
+        font-weight: bold;
+        width: 100%;
+        transform: rotate(33deg);
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:hover {
+        background: $secondary;
+
+        .header-link {
+          color: black;
+        }
+      }
+
+      .log-in-container {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+
+        .log-in-title {
+          display: block;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+          width: 100%;
+          text-align: center;
+          font-family: $oswald;
+          pointer-events: none;
+        }
+
+        .log-in-close {
+          cursor: pointer;
+          padding: 6px;
+          border: 2px solid $dark-gray;
+          border-radius: 100%;
+          font-weight: bold;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $secondary;
+          transition: all 0.3s;
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          color: $dark-gray;
+          pointer-events: all;
+
+          &:hover {
+            color: $secondary;
+            border-color: $dark-gray;
+            background: $dark-gray;
+          }
+        }
+
+        .log-in-form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .log-in-input {
+            height: 2.5rem;
+            margin-bottom: 1rem;
+            padding-left: 10px;
+          }
+        }
+
+        .submit-button {
+          background: $dark-gray;
+          border: 1px solid $dark-gray;
+          color: white;
+          height: 2rem;
+          width: 100%;
+          margin-top: 2rem;
+          cursor: pointer;
+          font-family: $oswald;
+        }
+      }
+    }
+
+    .header-link-right-container-logout {
+      background: $dark-gray;
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+      display: flex;
+      padding-right: 50px;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      .header-link {
+        color: white;
+        font-weight: bold;
+        width: 100%;
+        transform: rotate(33deg);
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:hover {
+        background: $secondary;
+
+        .header-link {
+          color: black;
+        }
+      }
+    }
+
+    .header-link-left-container-account {
+      background: $dark-gray;
+      height: 100%;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 0%);
+      display: flex;
+      padding-left: 40px;
+      transition: all 0.4s;
+      cursor: pointer;
+
+      .header-link {
+        color:white;
+        font-weight: bold;
+        width: 100%;
+        transform: rotate(-33deg);
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &:hover {
+        background: $secondary;
+
+        .header-link {
+          color: black;
+        }
+      }
+
+      .sign-up-container {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+
+        .sign-up-title {
+          display: block;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+          width: 100%;
+          text-align: center;
+          font-family: $oswald;
+          pointer-events: none;
+        }
+
+        .sign-up-form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .sign-up-input {
+            height: 2.5rem;
+            margin-bottom: 1rem;
+            padding-left: 10px;
+          }
+        }
+
+        .submit-button {
+          background: $dark-gray;
+          border: 1px solid $dark-gray;
+          color: white;
+          height: 2rem;
+          width: 100%;
+          margin-top: 2rem;
+          cursor: pointer;
+          font-family: $oswald;
+        }
+
+        .account-close {
+          cursor: pointer;
+          padding: 6px;
+          border: 2px solid $dark-gray;
+          border-radius: 100%;
+          font-weight: bold;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $secondary;
+          transition: all 0.3s;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          color: $dark-gray;
+          pointer-events: all;
+
+          &:hover {
+            color: $secondary;
+            border-color: $dark-gray;
+            background: $dark-gray;
+          }
+        }
+      }
+    }
+
+    .header-title-container {
+      height: 100%;
+      width: 100%;
+      padding-left: 300px;
+      padding-right: 300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero-section-image.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: rgba(255,255,255,0.7);
+      border-bottom: 2px solid $secondary;
+
+      .header-title {
+        font-size: 82px;
+        font-weight: bold;
+        color: $secondary;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.cookie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.4);
+  color: $secondary;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  .cookie-button {
+    background: $dark-gray;
+    border: 1px solid $secondary;
+    color: white;
+    cursor: pointer;
+    margin-left: 3px;
+  }
+
+  .cookie-link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.expand-left {
+  background: $secondary !important;
+  height: 500px !important;
+  width: 350px !important;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
+  padding: 40px!important;
+
+}
+
+.expand-right {
+  background: $secondary !important;
+  height: 300px !important;
+  width: 300px !important;
+  padding: 40px!important;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
+
+}
