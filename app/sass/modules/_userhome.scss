@@ -34,83 +34,57 @@
   }
 
   .section-2 {
-    padding: 2rem 12rem;
 
-    .s2-matches-container {
-      width: 100%;
-      height: auto;
+    .s2-header-container {
+      padding: 2rem 12rem;
+      background: $secondary;
+
+      .s2-title {
+        margin-bottom: 2rem;
+      }
+    }
+    .match-container {
+      background: $secondary;
+      height: 12rem;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
 
-      .match-container {
-        width: 100%;
+      .left-match-container {
+        width: 12rem;
+        height: 100%;
+      }
+
+      .center-match-container {
+        flex: 1;
         background: $dark-gray;
-        color: $secondary;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
-        &:after {
-          content: '';
-          height: 100%;
-          width: 3px;
-          background: $secondary;
-          position: absolute;
-          left: 66.66666%;
-          top: 0;
-          transform: translateX(-50%);
-        }
-
-        .team-one-container {
+        .match-details-upper {
+          width: 100%;
+          height: 50%;
+          border-bottom: 1.5px solid $secondary;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          padding-left: 2rem;
-          padding-right: 1rem;
+          color: $secondary;
         }
 
-        .team-two-container {
+        .match-details-lower {
+          width: 100%;
+          height: 50%;
+          border-top: 1.5px solid $secondary;
           display: flex;
           flex-direction: row;
-          padding-left: 1rem;
-          padding-right: 2rem;
           justify-content: space-between;
-          border-left: 1px solid $secondary;
+          color: $secondary;
         }
+      }
 
-        .bet-details-container {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          padding-right: 2rem;
-
-
-          .bet-title {
-            margin: 0;
-            font-size: 18px;
-          }
-
-          .bets-container {
-            height: 100%;
-            width: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .bet {
-              font-weight: bold;
-
-              &:won {
-                color: greenyellow;
-              }
-
-              &:lost {
-                color: red;
-              }
-            }
-          }
-        }
+      .right-match-container {
+        width: 12rem;
+        height: 100%;
       }
     }
   }
@@ -261,5 +235,15 @@
         }
       }
     }
+  }
+
+  .won {
+    color: green;
+    font-size: 21px;
+  }
+
+  .lost {
+    color: red;
+    font-size: 21px;
   }
 }
