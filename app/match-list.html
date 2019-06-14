@@ -14,32 +14,18 @@
 
 <body>
 
-<!-- user-home-page -->
-<div class="user-home-page">
+<div class="match-list-page">
   <div class="overlay"> <div class="loading-box"></div> </div>
   <section class="app-header-container">
     <header class="app-header">
-      <div class="header-link-left-container-account">
-        <span class="header-link">Account</span>
-
-        <div class="sign-up-container">
-          <span class="sign-up-title">Account Details</span>
-          <div class="account-close">X</div>
-          <form class="sign-up-form">
-            <input class="sign-up-input" type="text" placeholder="First Name">
-            <input class="sign-up-input" type="text" placeholder="Last Name">
-            <input class="sign-up-input" type="email" placeholder="Email">
-            <input class="sign-up-input" type="text" placeholder="Username">
-            <input class="sign-up-input" type="password" placeholder="Password">
-            <input class="sign-up-input" type="password" placeholder="Repeat Password">
-          </form>
-          <button class="submit-button">Submit</button>
-        </div>
+      <div class="header-link-left-container-back">
+        <span class="header-link">Back</span>
       </div>
       <div class="header-title-container">
         <div class="header-section">
           <div class="hs-header">
             <button id="Premier" class="hs-header-button">Premier League Matches</button>
+            <h2>Match List</h2>
             <button id="Bundes" class="hs-header-button">Bundesliga</button>
           </div>
         </div>
@@ -49,142 +35,257 @@
       </div>
     </header>
   </section>
-  <section class="user-home">
-    <div class="section-1">
-      <div class="s1-header-container">
-        <h2 class="s1-title">Your Matches:</h2>
-      </div>
-      <div class="match-container">
-        <div class="left-match-container">
-          <button class="match-button">
-            <p class="match-details-title">Match</p>
-            <p class="match-details-title">Details</p>
-          </button>
+  <section class="section-1">
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
         </div>
-        <!--<div class="center-match-container">
-          <div class="match-details-upper row no-gutters">
-            <div class="team01-container col-6">
-              <h2 class="team-name">England</h2>
-              <h2 class="team-score">2</h2>
-            </div>
-            <div class="team02-container col-6">
-              <h2 class="team-score">0</h2>
-              <h2 class="team-name">Norway</h2>
-            </div>
-          </div>
-        </div>-->
-        <div class="center-kickoff-container">
-          <div class="match-details-upper row no-gutters">
-            <div class="team01-container col-6">
-              <h2>Kickoff countdown:</h2>
-              <h2>00:28</h2>
-            </div>
-            <div class="team02-container col-6">
-              <h2 class="team-name">England</h2>
-              <h2 class="team-score">-</h2>
-              <h2 class="team-name">Norway</h2>
-            </div>
-          </div>
-        </div>
-        <div class="right-match-container">
-          <div class="match-time-container">
-            <p>Match time:</p>
-            <div class="time-container">
-            <span>--</span><span>:</span><span>--</span>
-            </div>
-          </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
         </div>
       </div>
-      <div class="match-container">
-        <div class="left-match-container">
-          <button class="match-button">
-            <p class="match-details-title">Match</p>
-            <p class="match-details-title">Details</p>
-          </button>
-        </div>
-        <div class="center-match-container">
-          <div class="match-details-upper row no-gutters">
-            <div class="team01-container col-6">
-              <h2 class="team-name">England</h2>
-              <h2 class="team-score">2</h2>
-            </div>
-            <div class="team02-container col-6">
-              <h2 class="team-score">0</h2>
-              <h2 class="team-name">Norway</h2>
-            </div>
-          </div>
-        </div>
-        <div class="right-match-container">
-          <div class="match-time-container">
-            <p>Match time:</p>
-            <div class="time-container">
-              <span>23</span><span>:</span><span>44</span>
-            </div>
-          </div>
-        </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
       </div>
-      <div class="match-container">
-        <div class="left-match-container">
-          <button class="match-button">
-            <p class="match-details-title">Match</p>
-            <p class="match-details-title">Details</p>
-          </button>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
         </div>
-        <!--<div class="center-match-container">
-          <div class="match-details-upper row no-gutters">
-            <div class="team01-container col-6">
-              <h2 class="team-name">England</h2>
-              <h2 class="team-score">2</h2>
-            </div>
-            <div class="team02-container col-6">
-              <h2 class="team-score">0</h2>
-              <h2 class="team-name">Norway</h2>
-            </div>
-          </div>
-        </div>-->
-        <div class="center-ended-container">
-          <div class="match-details-upper row no-gutters">
-            <div class="team01-container col-6">
-              <h2>Match has ended.</h2>
-            </div>
-            <div class="team02-container col-6">
-              <h2 class="team-name">England</h2>
-              <h2 class="team-score">4</h2>
-              <h2>-</h2>
-              <h2 class="team-score">1</h2>
-              <h2 class="team-name">Norway</h2>
-            </div>
-          </div>
-        </div>
-        <div class="right-match-container">
-          <div class="match-time-container">
-            <p>Match time:</p>
-            <div class="time-container">
-              <span>94</span><span>:</span><span>00</span>
-            </div>
-          </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
         </div>
       </div>
     </div>
-    <div class="section-contact">
-      <div class="sc-content-container">
-        <h2 class="sc-title">We'd love to hear from you</h2>
-        <p class="sc-text">Whether you have a question about features, trials, pricing,need a demo, or anything else, our team is ready to answer all your questions</p>
-        <button class="sc-button">GET IN TOUCH</button>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
       </div>
-      <div class="sc-form-container">
-        <form class="sc-form">
-          <div class="sc-input-container">
-            <input type="text" class="sc-form-text" placeholder="First Name">
-            <input type="text" class="sc-form-text" placeholder="Last Name">
-            <input type="text" class="sc-form-text" placeholder="Email">
-          </div>
-          <textarea class="sc-form-textarea" placeholder="Enter your message here..."></textarea>
-          <div class="buttons-container">
-            <button class="sc-form-button">SUBMIT</button>
-            <div class="sc-form-close">X</div>
-          </div>
-        </form>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
+      </div>
+    </div>
+    <div class="match-container">
+      <div class="left-match-container">
+        <div class="date-container">
+          <p>Date:</p>
+          <p>19.09.2005.</p>
+        </div>
+        <div class="time-container">
+          <p>Time:</p>
+          <p>21:00</p>
+        </div>
+      </div>
+      <div class="center-match-container">
+        <h2>England</h2>
+        <h2>-</h2>
+        <h2>Norway</h2>
+      </div>
+      <div class="right-match-container">
+        <div class="odds-container">
+          <p>Odds:</p>
+          <p>( 1 x 2 )</p>
+        </div>
+        <div class="bets-container">
+          <button class="bet-button">Win</button>
+          <button class="bet-button">Draw</button>
+          <button class="bet-button">Lose</button>
+        </div>
       </div>
     </div>
   </section>
@@ -261,7 +362,6 @@
 <!-- -->
 <script>
   var pageAnimation = new TimelineMax();
-  var arrowAnimation = new TimelineMax({repeat:-1,repeatDelay:3});
   var boxAnimation = new TimelineMax();
   $(window).on('load', function () {
     boxAnimation.to(".loading-box", 1, {rotation:360, repeat:-1, transformOrigin:"50% 50%"});
@@ -269,12 +369,7 @@
       pageAnimation.to(".overlay", 0.8, {opacity: 0, display:"none", ease:Linear.easeNone}, 0);
       pageAnimation.from(".header-link-left-container", 0.8,{opacity: 0}, 0);
       pageAnimation.from(".header-link-right-container", 0.8,{opacity: 0}, 0);
-      pageAnimation.from(".s1-title", 1,{opacity: 0}, 0);
-      pageAnimation.from(".s1-sub-title", 1,{opacity: 0}, 0);
-      pageAnimation.from(".arrows-container", 1,{opacity: 0}, 0);
     }, 1000);
-
-    arrowAnimation.staggerFromTo(".arrow", 0.5,{﻿borderColor:"transparent"},{borderColor:"white"}, 0.2);
   });
 </script>
 </body>

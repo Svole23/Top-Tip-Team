@@ -1,90 +1,220 @@
-.user-home {
+.user-home-page {
+
   .section-1 {
-    padding: 2rem 12rem;
-    background: $dark-gray;
-    color: white;
-    margin-top: 130px;
 
-    .s1-header {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background: transparent;
-
-      .s1-header-button {
-        text-align: center;
-        height: 4rem;
-        width: 16rem;
-        background: $dark-gray;
-        border: 1px solid $secondary;
-        color: white;
-        font-weight: bold;
-        font-family: $oswald;
-        cursor: pointer;
-        transition: all 0.3s;
-
-        &:hover {
-          background: $secondary;
-          color: $dark-gray;
-          border-color: $dark-gray;
-        }
-      }
-    }
-  }
-
-  .section-2 {
-
-    .s2-header-container {
+    .s1-header-container {
       padding: 2rem 12rem;
-      background: $secondary;
+      background: $white;
+      margin-top: 130px;
 
-      .s2-title {
-        margin-bottom: 2rem;
+      .s1-title {
+        margin-bottom: 0;
       }
     }
     .match-container {
-      background: $secondary;
-      height: 12rem;
+      background: $white;
+      height: 6rem;
       display: flex;
       flex-direction: row;
+      margin-bottom: 2rem;
 
       .left-match-container {
         width: 12rem;
         height: 100%;
+        padding-right: 2rem;
+
+        .match-button {
+          width: 100%;
+          height: 100%;
+          background: $secondary;
+          color: $primary;
+          border: none;
+          transition: all 0.3s;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          font-weight: bold;
+          border-radius: 0;
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+          padding: 1.5rem 1rem;
+          cursor: pointer;
+
+          .match-details-title {
+            margin: 0;
+          }
+
+          &:hover {
+            background: $primary;
+            color: $white;
+          }
+        }
       }
 
       .center-match-container {
         flex: 1;
-        background: $dark-gray;
+        background: $primary;
         height: 100%;
         display: flex;
         flex-direction: column;
+        border-radius: 5px;
 
         .match-details-upper {
           width: 100%;
-          height: 50%;
-          border-bottom: 1.5px solid $secondary;
+          height: 100%;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          color: $secondary;
-        }
+          color: $white;
+          position: relative;
 
-        .match-details-lower {
-          width: 100%;
-          height: 50%;
-          border-top: 1.5px solid $secondary;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          color: $secondary;
+          &:after {
+            content: '';
+            height: 100%;
+            width: 3px;
+            background: $secondary;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform:translateX(-50%);
+          }
+
+          .team01-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 6rem;
+            padding-right: 3rem;
+          }
+
+          .team02-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 3rem;
+            padding-right: 6rem;
+          }
         }
       }
 
       .right-match-container {
         width: 12rem;
         height: 100%;
+        padding-left: 2rem;
+
+        .match-time-container {
+          height: 100%;
+          width: 100%;
+          background: $secondary;
+          color: $primary;
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+
+        }
+      }
+    }
+    .center-kickoff-container {
+      flex: 1;
+      background: $primary;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+
+      .match-details-upper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $white;
+        position: relative;
+
+        &:after {
+          content: '';
+          height: 100%;
+          width: 3px;
+          background: $secondary;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform:translateX(-50%);
+        }
+
+        .team01-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
+
+        .team02-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 6rem;
+          padding-right: 6rem;
+        }
+      }
+    }
+
+    .center-ended-container {
+      flex: 1;
+      background: $primary;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+
+      .match-details-upper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $white;
+        position: relative;
+
+        &:after {
+          content: '';
+          height: 100%;
+          width: 3px;
+          background: $secondary;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform:translateX(-50%);
+        }
+
+        .team01-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 6rem;
+          padding-right: 6rem;
+        }
+
+        .team02-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
       }
     }
   }
@@ -92,7 +222,7 @@
   .section-contact {
     padding: 6rem 12rem;
     background: white;
-    color: $dark-gray;
+    color: $primary;
     position: relative;
 
     .sc-content-container {
@@ -117,7 +247,7 @@
         text-align: center;
         height: 4rem;
         width: 16rem;
-        background: $dark-gray;
+        background: $primary;
         border: 1px solid $secondary;
         color: white;
         font-weight: bold;
@@ -128,8 +258,8 @@
 
         &:hover {
           background: $secondary;
-          color: $dark-gray;
-          border-color: $dark-gray;
+          color: $primary;
+          border-color: $primary;
         }
       }
     }
@@ -144,7 +274,7 @@
       opacity: 0;
       visibility: hidden;
       padding: 0 12rem;
-      background: $dark-gray;
+      background: $primary;
       color: white;
       transition: all 0.5s;
       justify-content: center;
@@ -204,12 +334,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: $dark-gray;
+            background: $primary;
             transition: all 0.3s;
 
             &:hover {
-              color: $dark-gray;
-              border-color: $dark-gray;
+              color: $primary;
+              border-color: $primary;
               background: $secondary;
             }
           }
@@ -219,15 +349,15 @@
             height: 4rem;
             width: 16rem;
             background: $secondary;
-            color: $dark-gray;
-            border: 1px solid $dark-gray;
+            color: $primary;
+            border: 1px solid $primary;
             font-weight: bold;
             font-family: $oswald;
             cursor: pointer;
             transition: all 0.3s;
 
             &:hover {
-              background: $dark-gray;
+              background: $primary;
               color: white;
               border-color: $secondary;
             }
@@ -235,15 +365,5 @@
         }
       }
     }
-  }
-
-  .won {
-    color: green;
-    font-size: 21px;
-  }
-
-  .lost {
-    color: red;
-    font-size: 21px;
   }
 }

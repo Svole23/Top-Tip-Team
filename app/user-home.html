@@ -14,8 +14,7 @@
 
 <body>
 
-<!-- home-page -->
-<div class="home-page">
+<div class="user-home-page">
   <div class="overlay"> <div class="loading-box"></div> </div>
   <section class="app-header-container">
     <header class="app-header">
@@ -37,7 +36,12 @@
         </div>
       </div>
       <div class="header-title-container">
-        <h1 class="header-title">TOP TIP TEAM</h1>
+        <div class="header-section">
+          <div class="hs-header">
+            <button id="Premier" class="hs-header-button">Premier League Matches</button>
+            <button id="Bundes" class="hs-header-button">Bundesliga</button>
+          </div>
+        </div>
       </div>
       <div class="header-link-right-container-logout">
         <span class="header-link">Log Out</span>
@@ -46,45 +50,119 @@
   </section>
   <section class="user-home">
     <div class="section-1">
-      <div class="s1-header">
-        <button class="s1-header-button">Premier League Matches</button>
-      </div>
-    </div>
-    <div class="section-2">
-      <div class="s2-header-container">
-        <h2 class="s2-title">Your Matches</h2>
+      <div class="s1-header-container">
+        <h2 class="s1-title">Your Matches:</h2>
       </div>
       <div class="match-container">
-        <div class="left-match-container"></div>
-        <div class="center-match-container">
-          <div class="match-details-upper">
+        <div class="left-match-container">
+          <button class="match-button">
+            <p class="match-details-title">Match</p>
+            <p class="match-details-title">Details</p>
+          </button>
+        </div>
+        <!--<div class="center-match-container">
+          <div class="match-details-upper row no-gutters">
+            <div class="team01-container col-6">
+              <h2 class="team-name">England</h2>
+              <h2 class="team-score">2</h2>
+            </div>
+            <div class="team02-container col-6">
+              <h2 class="team-score">0</h2>
+              <h2 class="team-name">Norway</h2>
+            </div>
           </div>
-          <div class="match-details-lower">
-            <div class="match-time">
-              <div>
-                <span>Current Game Time:</span>
-              </div>
-              <div class="game-time-container">
-                <span>22:38</span>
-              </div>
+        </div>-->
+        <div class="center-kickoff-container">
+          <div class="match-details-upper row no-gutters">
+            <div class="team01-container col-6">
+              <h2>Kickoff countdown:</h2>
+              <h2>00:28</h2>
             </div>
-            <div class="match-location">
-              <div>
-                <span>Match Location:</span>
-              </div>
-              <div class="location-container">
-                <span>Old Trafford</span>
-              </div>
-            </div>
-            <div class="match-refeere">
-              <div>Match refeere:</div>
-              <div class="referee-container">
-                <span>Pierluigi Collina</span>
-              </div>
+            <div class="team02-container col-6">
+              <h2 class="team-name">England</h2>
+              <h2 class="team-score">-</h2>
+              <h2 class="team-name">Norway</h2>
             </div>
           </div>
         </div>
-        <div class="right-match-container"></div>
+        <div class="right-match-container">
+          <div class="match-time-container">
+            <p>Match time:</p>
+            <div class="time-container">
+            <span>--</span><span>:</span><span>--</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="match-container">
+        <div class="left-match-container">
+          <button class="match-button">
+            <p class="match-details-title">Match</p>
+            <p class="match-details-title">Details</p>
+          </button>
+        </div>
+        <div class="center-match-container">
+          <div class="match-details-upper row no-gutters">
+            <div class="team01-container col-6">
+              <h2 class="team-name">England</h2>
+              <h2 class="team-score">2</h2>
+            </div>
+            <div class="team02-container col-6">
+              <h2 class="team-score">0</h2>
+              <h2 class="team-name">Norway</h2>
+            </div>
+          </div>
+        </div>
+        <div class="right-match-container">
+          <div class="match-time-container">
+            <p>Match time:</p>
+            <div class="time-container">
+              <span>23</span><span>:</span><span>44</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="match-container">
+        <div class="left-match-container">
+          <button class="match-button">
+            <p class="match-details-title">Match</p>
+            <p class="match-details-title">Details</p>
+          </button>
+        </div>
+        <!--<div class="center-match-container">
+          <div class="match-details-upper row no-gutters">
+            <div class="team01-container col-6">
+              <h2 class="team-name">England</h2>
+              <h2 class="team-score">2</h2>
+            </div>
+            <div class="team02-container col-6">
+              <h2 class="team-score">0</h2>
+              <h2 class="team-name">Norway</h2>
+            </div>
+          </div>
+        </div>-->
+        <div class="center-ended-container">
+          <div class="match-details-upper row no-gutters">
+            <div class="team01-container col-6">
+              <h2>Match has ended.</h2>
+            </div>
+            <div class="team02-container col-6">
+              <h2 class="team-name">England</h2>
+              <h2 class="team-score">4</h2>
+              <h2>-</h2>
+              <h2 class="team-score">1</h2>
+              <h2 class="team-name">Norway</h2>
+            </div>
+          </div>
+        </div>
+        <div class="right-match-container">
+          <div class="match-time-container">
+            <p>Match time:</p>
+            <div class="time-container">
+              <span>94</span><span>:</span><span>00</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section-contact">
@@ -190,12 +268,7 @@
       pageAnimation.to(".overlay", 0.8, {opacity: 0, display:"none", ease:Linear.easeNone}, 0);
       pageAnimation.from(".header-link-left-container", 0.8,{opacity: 0}, 0);
       pageAnimation.from(".header-link-right-container", 0.8,{opacity: 0}, 0);
-      pageAnimation.from(".s1-title", 1,{opacity: 0}, 0);
-      pageAnimation.from(".s1-sub-title", 1,{opacity: 0}, 0);
-      pageAnimation.from(".arrows-container", 1,{opacity: 0}, 0);
     }, 1000);
-
-    arrowAnimation.staggerFromTo(".arrow", 0.5,{﻿borderColor:"transparent"},{borderColor:"white"}, 0.2);
   });
 </script>
 </body>

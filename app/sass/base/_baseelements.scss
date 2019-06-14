@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $dark-gray;
+  background: $primary;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -16,6 +16,14 @@
     border: 5px solid $secondary;
     transform: rotate(45deg);
   }
+}
+
+input {
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 5px;
 }
 
 input::-webkit-input-placeholder {
@@ -70,7 +78,6 @@ ul, ol {
 }
 
 html {
-	position: relative;
 	position: relative;
 	min-height: 100%;
 	font-size: inherit;

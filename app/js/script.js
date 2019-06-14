@@ -95,8 +95,6 @@ $(document).ready(function () {
       .addTo(controller);
 
 
-  //USER HOME PAGE//
-
   $(".header-link-left-container-account").click(function(){
     $(".header-link-left-container-account").addClass("expand-left");
     $(".header-link-left-container-account .header-link").addClass("hide");
@@ -114,4 +112,44 @@ $(document).ready(function () {
   $(".header-link-right-container-logout").click(function(){
     window.location.href='index.html';
   });
+
+  $(".match-button").click(function(){
+    window.location.href='match.html';
+  });
+
+  $("#Bundes").click(function(){
+    window.location.href='match-list.html';
+  });
+
+  $("#Premier").click(function(){
+    window.location.href='match-list.html';
+  });
+
+  $(".header-link-left-container-back").click(function(){
+    window.location.href='user-home.html';
+  });
+
+  $(".match-time").click(function(){
+    $(".match-time .match-details").addClass("show")
+  });
+
+  $(".match-time .match-details").click(function (event) {
+    $(".match-time .match-details").removeClass("show");
+    $(".match-time .match-statistic").addClass("show");
+    event.stopPropagation()
+  });
+
+  $(".match-time .match-statistic").click(function (event) {
+    $(".match-time .match-statistic").removeClass("show");
+    event.stopPropagation()
+  });
+
+  $(".bet-button").click(function(){
+    $(".betting-choices-container").addClass("show");
+  });
+
+  $(".betting-choices-button-close").click(function(){
+    $(".betting-choices-container").removeClass("show")
+  })
+
 });
