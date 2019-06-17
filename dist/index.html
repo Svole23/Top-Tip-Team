@@ -14,43 +14,45 @@
 
 <body>
 
-<!-- home-page -->
 <div class="home-page">
-  <div class="overlay"> <div class="loading-box"></div> </div>
+  <div class="cookie show">
+    <span class="cookie-span">This site uses cookies to give you the best experience we can. By continuing to browse the site you are agreeing to cookie usage.</span>
+    <div class="cookie-container">
+      <span class="cookie-link">Learn more.</span>
+      <button class="cookie-button">Accept</button>
+    </div>
+  </div>
+  <div class="overlay"><div class="loading-box"></div></div>
   <section class="app-header-container">
     <header class="app-header">
-      <div class="header-link-left-container">
-        <span class="header-link">Sign Up</span>
-        <div class="sign-up-container">
-          <span class="sign-up-title">Sign Up</span>
-          <div class="sign-up-close">X</div>
-          <form class="sign-up-form">
-            <input class="sign-up-input" type="text" placeholder="First Name">
-            <input class="sign-up-input" type="text" placeholder="Last Name">
-            <input class="sign-up-input" type="email" placeholder="Email">
-            <input class="sign-up-input" type="text" placeholder="Username">
-            <input class="sign-up-input" type="password" placeholder="Password">
-            <input class="sign-up-input" type="password" placeholder="Repeat Password">
-          </form>
-          <span class="user-agreement-span">By clicking "Submit" you agree to Top Tip Team <strong>User Agreement</strong>,<strong>Privacy Policy</strong> and <strong>Cookie Policy</strong></span>
-          <button id="signup-button" class="submit-button">Submit</button>
-        </div>
-      </div>
-      <div class="cookie show">
-        <span class="cookie-span">This site uses cookies. By continuing to browse the site you are agreeing to cookie usage.</span>
-        <span class="cookie-link">More Info</span>
-        <button class="cookie-button">Got it!</button>
-      </div>
       <div class="header-link-right-container">
-        <span class="header-link">Log In</span>
-        <div class="log-in-container">
-          <span class="log-in-title">Log In</span>
-          <div class="log-in-close">X</div>
-          <form class="log-in-form">
-            <input class="log-in-input" type="text" placeholder="Username">
-            <input class="log-in-input" type="password" placeholder="Password">
-          </form>
-          <button id="login-button" class="submit-button">Submit</button>
+        <div class="header-link"></div>
+        <div class="header-sign-up-container">
+          <span class="header-link">Sign Up</span>
+          <div class="sign-up-container">
+            <span class="sign-up-title">Sign Up</span>
+            <form class="sign-up-form">
+              <input class="sign-up-input" type="text" placeholder="First Name">
+              <input class="sign-up-input" type="text" placeholder="Last Name">
+              <input class="sign-up-input" type="email" placeholder="Email">
+              <input class="sign-up-input" type="password" placeholder="Password">
+              <input class="sign-up-input" type="password" placeholder="Repeat Password">
+            </form>
+            <span class="user-agreement-span">By clicking "Submit" you agree to Top Tip Team <strong>User Agreement</strong>,<strong>Privacy Policy</strong> and <strong>Cookie Policy</strong></span>
+            <button id="signup-button" class="submit-button">SIGN UP</button>
+          </div>
+        </div>
+        <div class="header-log-in-container">
+          <span class="header-link">Log In</span>
+          <div class="log-in-container">
+            <span class="log-in-title">Log In</span>
+            <form class="log-in-form">
+              <input class="log-in-input" type="text" placeholder="Username">
+              <input class="log-in-input" type="password" placeholder="Password">
+            </form>
+            <button id="login-button" class="submit-button">LOG IN</button>
+            <div class="log-in-close"></div>
+          </div>
         </div>
       </div>
     </header>
@@ -66,13 +68,13 @@
       </div>
     </div>
     <div class="section-2">
-        <div class="s2-content-container">
+        <div id="s2-content-container" class="s2-content-container">
           <h2 class="s2-title">Who we are?</h2>
           <p class="s2-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
         </div>
     </div>
     <div class="section-3">
-      <div class="s3-content-container">
+      <div id="s3-content-container" class="s3-content-container">
         <h2 class="s3-title">Why us?</h2>
         <p class="s3-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
       </div>
@@ -131,6 +133,14 @@
         </div>
       </div>
     </div>
+    <div class="section-5">
+      <div class="s5-content-container">
+        <h3 class="s5-title">Sign up now and see for yourself</h3>
+        <div class="s5-button-container">
+          <button class="s5-signup-button">SIGN UP</button>
+        </div>
+      </div>
+    </div>
     <div class="section-contact">
       <div class="sc-content-container">
         <h2 class="sc-title">We'd love to hear from you</h2>
@@ -147,7 +157,7 @@
           <textarea class="sc-form-textarea" placeholder="Enter your message here..."></textarea>
           <div class="buttons-container">
             <button class="sc-form-button">SUBMIT</button>
-            <div class="sc-form-close">X</div>
+            <div class="sc-form-close"></div>
           </div>
         </form>
       </div>
@@ -155,24 +165,32 @@
   </section>
   <section class="app-footer-container">
     <div class="app-footer">
-      <h3 class="footer-title">Bet responsibly!</h3>
+      <h2 class="footer-title">Tip Top Team</h2>
       <div class="contact-container">
         <div class="contact-container-inner">
-          <h2 class="contact-title">Top Tip Team</h2>
-          <div class="contact-details-container">
-            <p>support@toptipbet.com</p>
-            <p>+38655423321</p>
-            <p>Some street 12A</p>
+          <div class="sections-links-container">
+            <a class="section-link who">Who We Are?</a>
+            <a class="section-link why">Why Us?</a>
           </div>
         </div>
         <div class="policy-container">
           <div class="legal-container">
-            <button class="footer-disclaimer-button">DISCLAIMER</button>
-            <button class="footer-privacy-policy-button">PRIVACY POLICY</button>
+            <a class="footer-disclaimer-link">Disclaimer</a>
+            <a class="footer-terms-link">Terms and Conditions</a>
+            <a class="footer-privacy-policy-link">Privacy Policy</a>
           </div>
         </div>
       </div>
-      <span class="copyright-span">Copyright Top Tip Team 2019</span>
+      <div class="copyright-container">
+        <div class="copyright-inner-container">
+          <p class="copyright-text">www.snabbare.com drivs av det maltesiska bolaget Snabbare Ltd. Organisationsnummer är C87779, med följande kontaktuppgifter: Telefonnummer är 00356 99971339 och e-post är kundtjanst@snabbare.com. Adress är 3rd Floor, Spinola Park, Triq Mikiel Ang Borg, St. Julians, SPK1000, Malta. Snabbare Ltd verkar i enlighet med den svenska Spellagen (SFS 2018:1138) med licens för onlinespel och vadhållning utfärdad av svenska licens- och tillsynsmyndigheten SPELINSPEKTIONEN (SI). Licensen är giltig mellan 20190101 och 20201231. Läs mer om SI och den svenska spelmarknaden på www.spelinspektionen.se. Det är förbjudet för personer under 18 år att spela hos Snabbare Ltd. Att spela kan vara beroendeframkallande och skadligt. Spela därför ansvarsfullt och måttligt. Vänligen besök https://www.snabbare.com/responsible-gaming där du kan sätta gränser för ditt spelande, ta en paus eller stänga av ditt konto. Om du är orolig över ditt eller annans spelande, vänligen kontakta:www.stödlinjen.sesom är en oberoende organisation som erbjuder professionell hjälp. Här på Snabbare.com är vi måna om att skapa en rolig och ansvarsfull spelmiljö när du ska spela casino på nätet. Rekommenderat av SveaCasino</p>
+        </div>
+      </div>
+      <div class="footer-image-container">
+        <div class="footer-image-container-inner">
+          <img class="footer-image" src="../images/footer-image.png">
+        </div>
+      </div>
     </div>
   </section>
   <div class="disclaimer-container">
@@ -207,6 +225,38 @@
       <button class="privacy-policy-button-close">CLOSE</button>
     </div>
   </div>
+  <div class="terms-container">
+    <div class="terms-inner-container">
+      <p class="privacy-policy">1. Gambling involves risk. Please only gamble with funds that you can afford to lose.
+        <br>2. Whilst we do are upmost to offer good advice and information we cannot be held responsible for any losses that you may incur as a result of gambling.
+        <br>3. We do our best to make sure all the information that we provide on this site is correct. However from time to time mistakes will be made and we will not be held liable. Please check any stats or information if you are unsure how accurate they are.
+        <br>4. No guarantees are Top Tip Team made wit regards to results or financial gain. All forms of betting carry financial risk and it is down to the individual to make bets with or without the assistance of information provided on this site.
+        <br>5. cannot be held responsible for any losses that may incur as a result of following the betting tips provided on this site.
+        <br>6. The material contained on this site is intended to inform and educate the reader and in no way represents an inducement to gamble legally or illegally.
+        <br>7. Past performances do not guarantee success in the future. There are no dead certainties when it come to betting so only risk money that you can comfortable afford to lose.
+        <br>8. We provide links to third party website's and we will not be held responsible for any content published on these sites.
+        <br>9. While we do our best to find the best odds for for all of our betting tips we cannot ensure they are always accurate as betting odds fluctuate from one minute to the next. All odds are subject to change and were correct at the time of publishing.
+        <br>10. Top Tip Team will not be liable to you (whether under the law of contact, the law of torts or otherwise) in relation to the contents of, or use of, or otherwise in connection with, this website.
+      </p>
+      <button class="terms-button-close">CLOSE</button>
+    </div>
+  </div>
+  <div class="gdpr-container">
+    <div class="gdpr-inner-container">
+      <p class="privacy-policy">1. Gambling involves risk. Please only gamble with funds that you can afford to lose.
+        <br>2. Whilst we do are upmost to offer good advice and information we cannot be held responsible for any losses that you may incur as a result of gambling.
+        <br>3. We do our best to make sure all the information that we provide on this site is correct. However from time to time mistakes will be made and we will not be held liable. Please check any stats or information if you are unsure how accurate they are.
+        <br>4. No guarantees are Top Tip Team made wit regards to results or financial gain. All forms of betting carry financial risk and it is down to the individual to make bets with or without the assistance of information provided on this site.
+        <br>5. cannot be held responsible for any losses that may incur as a result of following the betting tips provided on this site.
+        <br>6. The material contained on this site is intended to inform and educate the reader and in no way represents an inducement to gamble legally or illegally.
+        <br>7. Past performances do not guarantee success in the future. There are no dead certainties when it come to betting so only risk money that you can comfortable afford to lose.
+        <br>8. We provide links to third party website's and we will not be held responsible for any content published on these sites.
+        <br>9. While we do our best to find the best odds for for all of our betting tips we cannot ensure they are always accurate as betting odds fluctuate from one minute to the next. All odds are subject to change and were correct at the time of publishing.
+        <br>10. Top Tip Team will not be liable to you (whether under the law of contact, the law of torts or otherwise) in relation to the contents of, or use of, or otherwise in connection with, this website.
+      </p>
+      <button class="gdpr-button-close">CLOSE</button>
+    </div>
+  </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script crossorigin="anonymous"
@@ -223,6 +273,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 <!-- -->
 <script>
   var pageAnimation = new TimelineMax();

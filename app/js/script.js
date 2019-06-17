@@ -1,50 +1,39 @@
 $(document).ready(function () {
   var animation1 = new TimelineMax();
 
-  $(window).scroll(function() {
-    var height = $(window).scrollTop();
-
-    if(height  > 150) {
-      $(".cookie").removeClass("show");
-    }
-  });
-
   $(".cookie-button").click(function(){
     $(".cookie").removeClass("show");
   });
 
-  $(".header-link-left-container").click(function(){
-    $(".header-link-left-container").addClass("expand-left");
-    $(".header-link-left-container .header-link").addClass("hide");
-    $(".sign-up-container").addClass("show");
+  $(".cookie-link").click(function(){
+    $(".gdpr-container").addClass("show");
   });
 
-  $(".sign-up-close").click(function(event){
-    $(".header-link-left-container").removeClass("expand-left");
-    $(".header-link-left-container .header-link").removeClass("hide");
-    $(".sign-up-container").removeClass("show");
-    event.stopPropagation();
-  });
-
-  $("#signup-button").click(function(){
-    console.log("clicked");
+  $(".gdpr-button-close").click(function(){
+    $(".gdpr-container").removeClass("show");
   });
 
   $(".header-link-right-container").click(function(){
     $(".header-link-right-container").addClass("expand-right");
     $(".header-link-right-container .header-link").addClass("hide");
-    $(".log-in-container").addClass("show");
+    $(".header-sign-up-container").addClass("show");
+    $(".header-log-in-container").addClass("show");
   });
 
   $(".log-in-close").click(function(event){
     $(".header-link-right-container").removeClass("expand-right");
     $(".header-link-right-container .header-link").removeClass("hide");
-    $(".log-in-container").removeClass("show");
+    $(".header-sign-up-container").removeClass("show");
+    $(".header-log-in-container").removeClass("show");
     event.stopPropagation();
   });
 
   $("#login-button").click(function(){
     window.location.href='user-home.html';
+  });
+
+  $("#logout-button").click(function(){
+    window.location.href='index.html';
   });
 
   $(".sc-button").click(function(){
@@ -55,7 +44,7 @@ $(document).ready(function () {
     $(".sc-form-container").removeClass("show")
   });
 
-  $(".footer-disclaimer-button").click(function(){
+  $(".footer-disclaimer-link").click(function(){
     $(".disclaimer-container").addClass("show")
   });
 
@@ -63,12 +52,35 @@ $(document).ready(function () {
     $(".disclaimer-container").removeClass("show")
   });
 
-  $(".footer-privacy-policy-button").click(function(){
+  $(".who").click(function(){
+    $(window).scrollTo(".s2-content-container", 0,5);
+  });
+
+  $(".why").click(function(){
+    $(window).scrollTo(".s3-content-container", 0.5);
+  });
+
+  $(".footer-terms-link").click(function(){
+    $(".terms-container").addClass("show")
+  });
+
+  $(".terms-button-close").click(function(){
+    $(".terms-container").removeClass("show")
+  });
+
+  $(".footer-privacy-policy-link").click(function(){
     $(".privacy-policy-container").addClass("show")
   });
 
   $(".privacy-policy-button-close").click(function(){
     $(".privacy-policy-container").removeClass("show")
+  });
+
+  $(".s5-signup-button").click(function(){
+    $(".header-link-right-container").addClass("expand-right");
+    $(".header-link-right-container .header-link").addClass("hide");
+    $(".header-sign-up-container").addClass("show");
+    $(".header-log-in-container").addClass("show");
   });
 
   var animation2 = new TimelineMax();
@@ -151,5 +163,9 @@ $(document).ready(function () {
   $(".betting-choices-button-close").click(function(){
     $(".betting-choices-container").removeClass("show")
   })
+
+  $(".match-list-link").click(function(){
+    window.location.href='match.html';
+  });
 
 });

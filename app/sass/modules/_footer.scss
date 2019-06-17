@@ -3,6 +3,7 @@
   padding-bottom: 1.5rem;
   background: $primary;
   color: white;
+  border-top: 2px solid $secondary;
 
   .app-footer {
     width: 100%;
@@ -10,16 +11,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     .footer-title {
       margin-bottom: 1.5rem;
       padding-bottom: 1.5rem;
       border-bottom: 2px solid $secondary;
       width: 100%;
-      text-align: center;
       font-family: $oswald;
       font-weight: bold;
+      padding-left: 12rem;
     }
 
     .contact-container {
@@ -27,8 +27,14 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 12rem;
+      padding-right: 12rem;
+      flex-wrap: wrap;
+
+      .footer-company-name {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
 
       .contact-title {
         font-size: 42px;
@@ -41,6 +47,21 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      .sections-links-container {
+        display: flex;
+        flex-direction: column;
+
+        .section-link {
+          margin-bottom: 1.5rem;
+          color: $white;
+          font-family: $oswald;
+          cursor: pointer;
+          transition: all 0.3s;
+          font-size: 21px;
+          text-decoration: underline;
+        }
+      }
     }
 
     .policy-container {
@@ -51,54 +72,82 @@
         flex-direction: column;
         justify-content: space-between;
 
-        .footer-disclaimer-button {
+        .footer-disclaimer-link {
           text-align: center;
           margin-bottom: 1.5rem;
-          height: 4rem;
           width: 16rem;
-          background: $secondary;
-          color: $primary;
-          border: 1px solid $primary;
-          font-weight: bold;
+          color: $white;
           font-family: $oswald;
           cursor: pointer;
           transition: all 0.3s;
-
-          &:hover {
-            background: $primary;
-            color: $white;
-            border-color: $secondary;
-          }
+          font-size: 21px;
+          text-decoration: underline;
         }
 
-        .footer-privacy-policy-button {
+        .footer-terms-link {
           text-align: center;
-          height: 4rem;
+          margin-bottom: 1.5rem;
           width: 16rem;
-          background: $secondary;
-          color: $primary;
-          border: 1px solid $primary;
-          font-weight: bold;
+          color: $white;
           font-family: $oswald;
           cursor: pointer;
           transition: all 0.3s;
+          font-size: 21px;
+          text-decoration: underline;
+        }
 
-          &:hover {
-            background: $primary;
-            color: $white;
-            border-color: $secondary;
-          }
+        .footer-privacy-policy-link {
+          text-align: center;
+          width: 16rem;
+          margin-bottom: 1.5rem;
+          color: $white;
+          font-family: $oswald;
+          cursor: pointer;
+          transition: all 0.3s;
+          font-size: 21px;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .footer-image-container {
+      padding-left: 12rem;
+      padding-right: 12rem;
+      margin-top: 1.5rem;
+
+      .footer-image-container-inner {
+        width: 140px;
+        height: 70px;
+        overflow: hidden;
+
+        .footer-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }
   }
 
-  .copyright-span {
-    color: rgba(255,255,255,0.5);
-    font-size: 12px;
+  .copyright-container {
+    height: auto;
+    width: 100%;
+    padding-left: 12rem;
+    padding-right: 12rem;
+
+
+    .copyright-inner-container {
+      background: #510056;
+      font-size: 12px;
+      padding: 2rem;
+
+      .copyright-text {
+        margin: 0;
+        color: rgba(255,255,255,0.8);
+      }
+    }
   }
 }
-
 
 .privacy-policy-container {
   visibility: hidden;
@@ -147,6 +196,94 @@
 }
 
 .disclaimer-container {
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3s;
+   position: fixed;
+   top: 0;
+   left: 0;
+   padding: 3rem 13rem;
+   padding-bottom: 2rem;
+   background: rgba(0,0,0,0.7);
+   height: 100vh;
+   width: 100%;
+   z-index: 100000;
+
+   .disclaimer-inner-container {
+     background: white;
+     padding: 3rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
+
+   .disclaimer-button-close {
+     text-align: center;
+     height: 2rem;
+     width: 8rem;
+     background: $primary;
+     color: $white;
+     border: 1px solid $secondary;
+     font-weight: bold;
+     font-family: $oswald;
+     cursor: pointer;
+     transition: all 0.3s;
+     margin-top: 1rem;
+
+     &:hover {
+       background: $secondary;
+       color: $primary;
+       border-color: $primary;
+     }
+   }
+ }
+
+.terms-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3rem 12rem;
+  padding-bottom: 2rem;
+  background: rgba(0,0,0,0.7);
+  height: 100vh;
+  width: 100%;
+  z-index: 100000;
+
+  .terms-button-close {
+    text-align: center;
+    height: 2rem;
+    width: 8rem;
+    background: $primary;
+    color: $white;
+    border: 1px solid $secondary;
+    font-weight: bold;
+    font-family: $oswald;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+
+    &:hover {
+      background: $secondary;
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  .terms-inner-container {
+    background: white;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.gdpr-container {
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
@@ -160,7 +297,7 @@
   width: 100%;
   z-index: 100000;
 
-  .disclaimer-inner-container {
+  .gdpr-inner-container {
     background: white;
     padding: 3rem;
     display: flex;
@@ -169,7 +306,7 @@
     flex-direction: column;
   }
 
-  .disclaimer-button-close {
+  .gdpr-button-close {
     text-align: center;
     height: 2rem;
     width: 8rem;

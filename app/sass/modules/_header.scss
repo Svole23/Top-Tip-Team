@@ -46,89 +46,6 @@
           color: $primary;
         }
       }
-
-      .sign-up-container {
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 20px;
-
-        .sign-up-title {
-          display: block;
-          margin-bottom: 1.5rem;
-          font-weight: bold;
-          width: 100%;
-          text-align: center;
-          font-family: $oswald;
-          pointer-events: none;
-        }
-
-        .sign-up-close {
-          cursor: pointer;
-          padding: 6px;
-          border: 2px solid $primary;
-          border-radius: 100%;
-          font-weight: bold;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: $white;
-          transition: all 0.3s;
-          position: absolute;
-          top: 10px;
-          right: 20px;
-          color: $primary;
-          pointer-events: all;
-
-          &:hover {
-            color: $secondary;
-            border-color: $primary;
-            background: $primary;
-          }
-        }
-
-        .sign-up-form {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-
-          .sign-up-input {
-            height: 2.5rem;
-            margin-bottom: 1rem;
-            padding-left: 10px;
-          }
-        }
-
-        .submit-button {
-          background: $primary;
-          border: 1px solid $primary;
-          color: white;
-          height: 2rem;
-          width: 100%;
-          margin-top: 2rem;
-          cursor: pointer;
-          font-family: $oswald;
-        }
-
-        .user-agreement-span {
-          font-size: 10px;
-          height: 1rem;
-          text-align: center;
-          width: 100%;
-          display: block;
-        }
-
-        #signup-button {
-          margin-top: 1rem;
-        }
-      }
     }
 
     .header-link-right-container {
@@ -144,96 +61,228 @@
       transition: all 0.3s;
       cursor: pointer;
 
-      .header-link {
-        color: white;
+      .change-title {
+        font-family: $oswald;
         font-weight: bold;
-        width: 100%;
-        transform: rotate(33deg);
-        display: flex;
-        justify-content: flex-end;
-        transition: all 0.2s;
-        visibility: visible;
-        opacity: 1;
       }
 
-      &:hover {
+      .header-sign-up-container {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: auto;
         background: $secondary;
 
-        .header-link {
-          color: $primary;
+        .sign-up-container {
+          height: auto;
+          width: 100%;
+          padding: 40px 20px;
+
+          .sign-up-title {
+            display: block;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            font-family: $oswald;
+            pointer-events: none;
+          }
+
+          .sign-up-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .sign-up-input {
+              height: 2.5rem;
+              margin-bottom: 1rem;
+              padding-left: 10px;
+            }
+          }
+
+          .submit-button {
+            background: $primary;
+            border: 1px solid $primary;
+            color: white;
+            height: 2rem;
+            width: 100%;
+            margin-top: 2rem;
+            cursor: pointer;
+            font-family: $oswald;
+          }
+
+          .user-agreement-span {
+            font-size: 10px;
+            height: 1rem;
+            text-align: center;
+            width: 100%;
+            display: block;
+          }
+
+          #signup-button {
+            margin-top: 1rem;
+          }
         }
       }
 
-      .log-in-container {
-        height: 100%;
-        width: 100%;
+      .newsletter-title {
+        font-family: $oswald;
+        font-weight: bold;
+        margin-top: 2.7rem;
+      }
+
+      .newsletter-button {
+        margin-top: 0 !important;
+      }
+
+      .logout-button {
+        margin-top: 6rem !important;
+      }
+
+      .header-log-in-container {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
         position: absolute;
         top: 0;
         right: 0;
-        padding: 20px;
+        height: auto;
+        width: 50%;
+        background: $secondary;
 
-        .log-in-title {
-          display: block;
-          margin-bottom: 1.5rem;
-          font-weight: bold;
+        .log-in-container {
+          height: auto;
           width: 100%;
-          text-align: center;
-          font-family: $oswald;
-          pointer-events: none;
+          padding: 40px 20px;
+
+          .log-in-title {
+            display: block;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            font-family: $oswald;
+            pointer-events: none;
+          }
+
+          .log-in-close {
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+            border-radius: 100%;
+            border: 3px solid $primary;
+            transition: all 0.3s;
+            padding: 10px;
+
+            &:before {
+              content: '';
+              width: 80%;
+              height: 3px;
+              background: $primary;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%) rotate(45deg);
+            }
+
+            &:after {
+              content: '';
+              width: 80%;
+              height: 3px;
+              background: $primary;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%) rotate(-45deg);
+            }
+
+            &:hover {
+              background: $primary;
+              border-color: $secondary;
+
+              &:before {
+                background: $secondary;
+              }
+
+              &:after {
+                background: $secondary;
+              }
+            }
+          }
+
+          .log-in-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .log-in-input {
+              height: 2.5rem;
+              margin-bottom: 1rem;
+              padding-left: 10px;
+            }
+          }
+
+          .submit-button {
+            background: $primary;
+            border: 1px solid $primary;
+            color: white;
+            height: 2rem;
+            width: 100%;
+            margin-top: 2rem;
+            cursor: pointer;
+            font-family: $oswald;
+          }
         }
+      }
 
-        .log-in-close {
-          cursor: pointer;
-          padding: 6px;
-          border: 2px solid $primary;
-          border-radius: 100%;
-          font-weight: bold;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+      .header-link {
+        width: 50px;
+        height: 25px;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        transform: rotate(33deg);
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 25%;
+        right: 25%;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 3px;
           background: $white;
-          transition: all 0.3s;
           position: absolute;
-          top: 10px;
-          left: 20px;
-          color: $primary;
-          pointer-events: all;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%);
+          transition: all 0.2s;
+        }
+      }
 
-          &:hover {
-            color: $secondary;
-            border-color: $primary;
+      &:hover {
+        background: $secondary;
+
+        .header-link {
+          border-color: $primary;
+
+          &:after {
             background: $primary;
           }
         }
-
-        .log-in-form {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-
-          .log-in-input {
-            height: 2.5rem;
-            margin-bottom: 1rem;
-            padding-left: 10px;
-          }
-        }
-
-        .submit-button {
-          background: $primary;
-          border: 1px solid $primary;
-          color: white;
-          height: 2rem;
-          width: 100%;
-          margin-top: 2rem;
-          cursor: pointer;
-          font-family: $oswald;
-        }
       }
+
+
     }
 
     .header-link-right-container-logout {
@@ -266,109 +315,6 @@
 
         .header-link {
           color: $primary;
-        }
-      }
-    }
-
-    .header-link-left-container-account {
-      background: $primary;
-      height: 100%;
-      width: 200px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 0%);
-      display: flex;
-      padding-left: 40px;
-      transition: all 0.4s;
-      cursor: pointer;
-
-      .header-link {
-        color:white;
-        font-weight: bold;
-        width: 100%;
-        transform: rotate(-33deg);
-        transition: all 0.2s;
-        visibility: visible;
-        opacity: 1;
-      }
-
-      &:hover {
-        background: $secondary;
-
-        .header-link {
-          color: $primary;
-        }
-      }
-
-      .sign-up-container {
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 20px;
-
-        .sign-up-title {
-          display: block;
-          margin-bottom: 1.5rem;
-          font-weight: bold;
-          width: 100%;
-          text-align: center;
-          font-family: $oswald;
-          pointer-events: none;
-        }
-
-        .sign-up-form {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-
-          .sign-up-input {
-            height: 2.5rem;
-            margin-bottom: 1rem;
-            padding-left: 10px;
-          }
-        }
-
-        .submit-button {
-          background: $primary;
-          border: 1px solid $primary;
-          color: white;
-          height: 2rem;
-          width: 100%;
-          margin-top: 2rem;
-          cursor: pointer;
-          font-family: $oswald;
-        }
-
-        .account-close {
-          cursor: pointer;
-          padding: 6px;
-          border: 2px solid $primary;
-          border-radius: 100%;
-          font-weight: bold;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: $white;
-          transition: all 0.3s;
-          position: absolute;
-          top: 10px;
-          right: 20px;
-          color: $primary;
-          pointer-events: all;
-
-          &:hover {
-            color: $secondary;
-            border-color: $primary;
-            background: $primary;
-          }
         }
       }
     }
@@ -417,7 +363,7 @@
 
           .hs-header-button {
             text-align: center;
-            height: 4rem;
+            height: 3.5rem;
             width: 16rem;
             background: $primary;
             border: 1px solid $secondary;
@@ -434,10 +380,8 @@
             }
           }
         }
-
       }
     }
-
 
     .header-link-left-container-back {
       background: $primary;
@@ -451,6 +395,7 @@
       padding-left: 40px;
       transition: all 0.4s;
       cursor: pointer;
+      font-family: $oswald;
 
       .header-link {
         color:white;
@@ -481,43 +426,36 @@
   background: rgba(0,0,0,0.4);
   color: $white;
   padding: 15px;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 50%;
-  width: 50%;
+  width: 80%;
   transform: translateX(-50%);
   font-size: 12px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  z-index: 10000;
 
   .cookie-button {
     background: $primary;
     border: 1px solid $secondary;
     color: $white;
     cursor: pointer;
-    margin-left: 3px;
+    margin-left: 20px;
   }
 
   .cookie-link {
     text-decoration: underline;
     cursor: pointer;
+
   }
 }
 
-.expand-left {
-  background: $white !important;
-  height: 500px !important;
-  width: 350px !important;
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
-  padding: 40px!important;
-
-}
-
 .expand-right {
-  background: $white !important;
-  height: 300px !important;
-  width: 300px !important;
+  background: transparent !important;
+  height: 500px !important;
+  width: 600px !important;
   padding: 40px!important;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
 

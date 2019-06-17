@@ -6,7 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Tajawal:200,300,400,500,700,800,900");
-@import url("https://fonts.googleapis.com/css?family=Oswald:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 :root {
   --blue: #007bff;
@@ -8657,35 +8657,35 @@ button {
 }
 
 input::-webkit-input-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 input:-ms-input-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 input:-moz-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 input::-moz-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 textarea::-webkit-input-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 textarea:-ms-input-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 textarea:-moz-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 textarea::-moz-placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 *:focus {
@@ -8723,11 +8723,12 @@ body {
 }
 
 h1 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 h2 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
+  font-size: 1.7rem;
 }
 
 .app-footer-container {
@@ -8735,6 +8736,7 @@ h2 {
   padding-bottom: 1.5rem;
   background: #38003c;
   color: white;
+  border-top: 2px solid #00ff85;
 }
 
 .app-footer-container .app-footer {
@@ -8743,7 +8745,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .app-footer-container .app-footer .footer-title {
@@ -8751,9 +8752,9 @@ h2 {
   padding-bottom: 1.5rem;
   border-bottom: 2px solid #00ff85;
   width: 100%;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
+  padding-left: 12rem;
 }
 
 .app-footer-container .app-footer .contact-container {
@@ -8761,8 +8762,14 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  flex-wrap: wrap;
+}
+
+.app-footer-container .app-footer .contact-container .footer-company-name {
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .app-footer-container .app-footer .contact-container .contact-title {
@@ -8777,6 +8784,21 @@ h2 {
   justify-content: space-between;
 }
 
+.app-footer-container .app-footer .contact-container-inner .sections-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer-container .app-footer .contact-container-inner .sections-links-container .section-link {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 21px;
+  text-decoration: underline;
+}
+
 .app-footer-container .app-footer .policy-container {
   width: auto;
 }
@@ -8787,48 +8809,76 @@ h2 {
   justify-content: space-between;
 }
 
-.app-footer-container .app-footer .policy-container .legal-container .footer-disclaimer-button {
+.app-footer-container .app-footer .policy-container .legal-container .footer-disclaimer-link {
   text-align: center;
   margin-bottom: 1.5rem;
-  height: 4rem;
   width: 16rem;
-  background: #00ff85;
-  color: #38003c;
-  border: 1px solid #38003c;
-  font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  color: white;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 21px;
+  text-decoration: underline;
 }
 
-.app-footer-container .app-footer .policy-container .legal-container .footer-disclaimer-button:hover {
-  background: #38003c;
-  color: white;
-  border-color: #00ff85;
-}
-
-.app-footer-container .app-footer .policy-container .legal-container .footer-privacy-policy-button {
+.app-footer-container .app-footer .policy-container .legal-container .footer-terms-link {
   text-align: center;
-  height: 4rem;
+  margin-bottom: 1.5rem;
   width: 16rem;
-  background: #00ff85;
-  color: #38003c;
-  border: 1px solid #38003c;
-  font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  color: white;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 21px;
+  text-decoration: underline;
 }
 
-.app-footer-container .app-footer .policy-container .legal-container .footer-privacy-policy-button:hover {
-  background: #38003c;
+.app-footer-container .app-footer .policy-container .legal-container .footer-privacy-policy-link {
+  text-align: center;
+  width: 16rem;
+  margin-bottom: 1.5rem;
   color: white;
-  border-color: #00ff85;
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 21px;
+  text-decoration: underline;
 }
 
-.app-footer-container .copyright-span {
-  color: rgba(255, 255, 255, 0.5);
+.app-footer-container .app-footer .footer-image-container {
+  padding-left: 12rem;
+  padding-right: 12rem;
+  margin-top: 1.5rem;
+}
+
+.app-footer-container .app-footer .footer-image-container .footer-image-container-inner {
+  width: 140px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.app-footer-container .app-footer .footer-image-container .footer-image-container-inner .footer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-footer-container .copyright-container {
+  height: auto;
+  width: 100%;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.app-footer-container .copyright-container .copyright-inner-container {
+  background: #510056;
   font-size: 12px;
+  padding: 2rem;
+}
+
+.app-footer-container .copyright-container .copyright-inner-container .copyright-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .privacy-policy-container {
@@ -8854,7 +8904,7 @@ h2 {
   color: white;
   border: 1px solid #00ff85;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 1rem;
@@ -8907,13 +8957,101 @@ h2 {
   color: white;
   border: 1px solid #00ff85;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 1rem;
 }
 
 .disclaimer-container .disclaimer-button-close:hover {
+  background: #00ff85;
+  color: #38003c;
+  border-color: #38003c;
+}
+
+.terms-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3rem 12rem;
+  padding-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+  z-index: 100000;
+}
+
+.terms-container .terms-button-close {
+  text-align: center;
+  height: 2rem;
+  width: 8rem;
+  background: #38003c;
+  color: white;
+  border: 1px solid #00ff85;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.terms-container .terms-button-close:hover {
+  background: #00ff85;
+  color: #38003c;
+  border-color: #38003c;
+}
+
+.terms-container .terms-inner-container {
+  background: white;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gdpr-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3rem 13rem;
+  padding-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+  z-index: 100000;
+}
+
+.gdpr-container .gdpr-inner-container {
+  background: white;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gdpr-container .gdpr-button-close {
+  text-align: center;
+  height: 2rem;
+  width: 8rem;
+  background: #38003c;
+  color: white;
+  border: 1px solid #00ff85;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.gdpr-container .gdpr-button-close:hover {
   background: #00ff85;
   color: #38003c;
   border-color: #38003c;
@@ -9087,7 +9225,7 @@ h2 {
 }
 
 .home .section-4 .section-4-container .horizontal-sections-rounded .hs-border-container .hs-content-container .hs-title-container .hs-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
   margin: 0;
   font-size: 2.2rem;
@@ -9131,11 +9269,59 @@ h2 {
   background: #38003c;
 }
 
+.home .section-5 {
+  padding: 6rem 12rem;
+  background: white;
+  color: #38003c;
+  border-bottom: 3px solid #38003c;
+}
+
+.home .section-5 .s5-content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Merriweather", serif;
+}
+
+.home .section-5 .s5-content-container .s5-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 42px;
+}
+
+.home .section-5 .s5-content-container .s5-button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .section-5 .s5-content-container .s5-button-container .s5-signup-button {
+  width: 24rem;
+  height: 4rem;
+  background: #38003c;
+  color: white;
+  border: 3px solid #38003c;
+  font-size: 21px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.home .section-5 .s5-content-container .s5-button-container .s5-signup-button:hover {
+  background: #00ff85;
+  color: #38003c;
+}
+
 .home .section-contact {
   padding: 6rem 12rem;
   background: white;
   color: #38003c;
   position: relative;
+  padding-bottom: 8rem;
 }
 
 .home .section-contact .sc-content-container {
@@ -9159,13 +9345,13 @@ h2 {
 
 .home .section-contact .sc-content-container .sc-button {
   text-align: center;
-  height: 4rem;
+  height: 3.5rem;
   width: 16rem;
   background: #38003c;
   border: 1px solid #00ff85;
   color: white;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   margin-top: 2rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -9240,35 +9426,61 @@ h2 {
 }
 
 .home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close {
-  cursor: pointer;
-  padding: 10px;
-  border: 2px solid white;
-  border-radius: 100%;
-  font-weight: bold;
-  width: 45px;
   height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 45px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 3px solid white;
+  position: relative;
   background: #38003c;
   transition: all 0.3s;
 }
 
+.home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:before {
+  content: '';
+  width: 80%;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:after {
+  content: '';
+  width: 80%;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:hover {
-  color: #38003c;
   border-color: #38003c;
   background: #00ff85;
 }
 
+.home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:hover:after {
+  background: #38003c;
+}
+
+.home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:hover:before {
+  background: #38003c;
+}
+
 .home .section-contact .sc-form-container .sc-form .buttons-container .sc-form-button {
   text-align: center;
-  height: 4rem;
+  height: 3.5rem;
   width: 16rem;
   background: #00ff85;
   color: #38003c;
   border: 1px solid #38003c;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -9517,6 +9729,44 @@ h2 {
   padding-right: 3rem;
 }
 
+.user-home-page .section-2 {
+  padding: 6rem 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #38003c;
+}
+
+.user-home-page .section-2 .s2-title {
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.user-home-page .section-2 .betting-history-container {
+  width: 100%;
+  height: 14rem;
+  font-family: "Merriweather", serif;
+}
+
+.user-home-page .section-2 .betting-history-container .betting-history {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem;
+  background: white;
+  border: 3px solid #00ff85;
+  border-radius: 5px;
+}
+
+.user-home-page .section-2 .betting-history-container .betting-history .bet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  color: #38003c;
+}
+
 .user-home-page .section-contact {
   padding: 6rem 12rem;
   background: white;
@@ -9545,13 +9795,13 @@ h2 {
 
 .user-home-page .section-contact .sc-content-container .sc-button {
   text-align: center;
-  height: 4rem;
+  height: 3.5rem;
   width: 16rem;
   background: #38003c;
   border: 1px solid #00ff85;
   color: white;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   margin-top: 2rem;
   cursor: pointer;
   transition: all 0.3s;
@@ -9626,35 +9876,61 @@ h2 {
 }
 
 .user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close {
-  cursor: pointer;
-  padding: 10px;
-  border: 2px solid white;
-  border-radius: 100%;
-  font-weight: bold;
-  width: 45px;
   height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 45px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 3px solid white;
+  position: relative;
   background: #38003c;
   transition: all 0.3s;
 }
 
+.user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:before {
+  content: '';
+  width: 80%;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:after {
+  content: '';
+  width: 80%;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:hover {
-  color: #38003c;
   border-color: #38003c;
   background: #00ff85;
 }
 
+.user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:hover:after {
+  background: #38003c;
+}
+
+.user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-close:hover:before {
+  background: #38003c;
+}
+
 .user-home-page .section-contact .sc-form-container .sc-form .buttons-container .sc-form-button {
   text-align: center;
-  height: 4rem;
+  height: 3.5rem;
   width: 16rem;
   background: #00ff85;
   color: #38003c;
   border: 1px solid #38003c;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -10016,6 +10292,7 @@ h2 {
   align-items: center;
   justify-content: center;
   border-top: 3px solid #38003c;
+  padding-bottom: 6rem;
 }
 
 .match-page .section-5 .odds-container-outter {
@@ -10040,7 +10317,7 @@ h2 {
 
 .match-page .section-5 .bet-button-container {
   width: 100%;
-  height: 4rem;
+  height: 3.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10058,6 +10335,13 @@ h2 {
   background: #00ff85;
   transition: all 0.3s;
   border: 3px solid #38003c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-page .section-5 .bet-button-container .bet-button h2 {
+  margin: 0;
 }
 
 .match-page .section-5 .bet-button-container .bet-button:hover {
@@ -10090,6 +10374,49 @@ h2 {
   flex-direction: column;
 }
 
+.match-page .betting-choices-container .betting-choices-inner-container .betting-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.match-page .betting-choices-container .betting-choices-inner-container .betting-container .bet-team {
+  margin-bottom: 2rem;
+}
+
+.match-page .betting-choices-container .betting-choices-inner-container .betting-container .col-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-page .betting-choices-container .betting-choices-inner-container .submit-button {
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  color: #38003c;
+  width: 8rem;
+  cursor: pointer;
+  background: #00ff85;
+  transition: all 0.3s;
+  border: 3px solid #38003c;
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+}
+
+.match-page .betting-choices-container .betting-choices-inner-container .submit-button:hover {
+  color: white;
+  background: #38003c;
+  border: 3px solid #00ff85;
+}
+
+.match-page .betting-choices-container .betting-choices-inner-container .draw {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .match-page .betting-choices-container .betting-choices-button-close {
   text-align: center;
   height: 2rem;
@@ -10098,13 +10425,36 @@ h2 {
   color: white;
   border: 1px solid #00ff85;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 1rem;
 }
 
 .match-page .betting-choices-container .betting-choices-button-close:hover {
+  background: #00ff85;
+  color: #38003c;
+  border-color: #38003c;
+}
+
+.match-page .betting-choices-container .betting-choices-button-bet {
+  text-align: center;
+  height: 3rem;
+  width: 12rem;
+  background: #38003c;
+  color: white;
+  border: 1px solid #00ff85;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+  font-size: 21px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.match-page .betting-choices-container .betting-choices-button-bet:hover {
   background: #00ff85;
   color: #38003c;
   border-color: #38003c;
@@ -10128,10 +10478,22 @@ h2 {
   flex-direction: row;
   width: 100%;
   padding: 0 2rem;
+  cursor: pointer;
+  border: 1px solid #38003c;
+  transition: all 0.4s;
+  border-radius: 5px;
+}
+
+.match-list-page .section-1 .match-container:hover {
+  border-color: #00ff85;
+}
+
+.match-list-page .section-1 .match-container p {
+  margin: 0;
 }
 
 .match-list-page .section-1 .match-container .left-match-container {
-  width: 20rem;
+  width: 24rem;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -10164,7 +10526,7 @@ h2 {
 }
 
 .match-list-page .section-1 .match-container .right-match-container {
-  width: 20rem;
+  width: 24rem;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -10190,6 +10552,17 @@ h2 {
   background: #00ff85;
   border: none;
   color: #38003c;
+  height: 2rem;
+  width: 5rem;
+  border: 3px solid #38003c;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.match-list-page .section-1 .match-container .right-match-container .bets-container .bet-button:hover {
+  background: #38003c;
+  border-color: #00ff85;
+  color: white;
 }
 
 .app-header-container {
@@ -10244,89 +10617,6 @@ h2 {
   color: #38003c;
 }
 
-.app-header-container .app-header .header-link-left-container .sign-up-container {
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .sign-up-title {
-  display: block;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  pointer-events: none;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .sign-up-close {
-  cursor: pointer;
-  padding: 6px;
-  border: 2px solid #38003c;
-  border-radius: 100%;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  transition: all 0.3s;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: #38003c;
-  pointer-events: all;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .sign-up-close:hover {
-  color: #00ff85;
-  border-color: #38003c;
-  background: #38003c;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .sign-up-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .sign-up-form .sign-up-input {
-  height: 2.5rem;
-  margin-bottom: 1rem;
-  padding-left: 10px;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .submit-button {
-  background: #38003c;
-  border: 1px solid #38003c;
-  color: white;
-  height: 2rem;
-  width: 100%;
-  margin-top: 2rem;
-  cursor: pointer;
-  font-family: "Oswald", sans-serif;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container .user-agreement-span {
-  font-size: 10px;
-  height: 1rem;
-  text-align: center;
-  width: 100%;
-  display: block;
-}
-
-.app-header-container .app-header .header-link-left-container .sign-up-container #signup-button {
-  margin-top: 1rem;
-}
-
 .app-header-container .app-header .header-link-right-container {
   background: #38003c;
   height: 100%;
@@ -10341,87 +10631,52 @@ h2 {
   cursor: pointer;
 }
 
-.app-header-container .app-header .header-link-right-container .header-link {
-  color: white;
+.app-header-container .app-header .header-link-right-container .change-title {
+  font-family: "Merriweather", serif;
   font-weight: bold;
-  width: 100%;
-  transform: rotate(33deg);
-  display: flex;
-  justify-content: flex-end;
-  transition: all 0.2s;
-  visibility: visible;
-  opacity: 1;
 }
 
-.app-header-container .app-header .header-link-right-container:hover {
-  background: #00ff85;
-}
-
-.app-header-container .app-header .header-link-right-container:hover .header-link {
-  color: #38003c;
-}
-
-.app-header-container .app-header .header-link-right-container .log-in-container {
-  height: 100%;
-  width: 100%;
+.app-header-container .app-header .header-link-right-container .header-sign-up-container {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
   position: absolute;
   top: 0;
-  right: 0;
-  padding: 20px;
+  left: 0;
+  width: 50%;
+  height: auto;
+  background: #00ff85;
 }
 
-.app-header-container .app-header .header-link-right-container .log-in-container .log-in-title {
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container {
+  height: auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container .sign-up-title {
   display: block;
   margin-bottom: 1.5rem;
   font-weight: bold;
   width: 100%;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   pointer-events: none;
 }
 
-.app-header-container .app-header .header-link-right-container .log-in-container .log-in-close {
-  cursor: pointer;
-  padding: 6px;
-  border: 2px solid #38003c;
-  border-radius: 100%;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  transition: all 0.3s;
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  color: #38003c;
-  pointer-events: all;
-}
-
-.app-header-container .app-header .header-link-right-container .log-in-container .log-in-close:hover {
-  color: #00ff85;
-  border-color: #38003c;
-  background: #38003c;
-}
-
-.app-header-container .app-header .header-link-right-container .log-in-container .log-in-form {
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container .sign-up-form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.app-header-container .app-header .header-link-right-container .log-in-container .log-in-form .log-in-input {
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container .sign-up-form .sign-up-input {
   height: 2.5rem;
   margin-bottom: 1rem;
   padding-left: 10px;
 }
 
-.app-header-container .app-header .header-link-right-container .log-in-container .submit-button {
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container .submit-button {
   background: #38003c;
   border: 1px solid #38003c;
   color: white;
@@ -10429,7 +10684,172 @@ h2 {
   width: 100%;
   margin-top: 2rem;
   cursor: pointer;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
+}
+
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container .user-agreement-span {
+  font-size: 10px;
+  height: 1rem;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.app-header-container .app-header .header-link-right-container .header-sign-up-container .sign-up-container #signup-button {
+  margin-top: 1rem;
+}
+
+.app-header-container .app-header .header-link-right-container .newsletter-title {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  margin-top: 2.7rem;
+}
+
+.app-header-container .app-header .header-link-right-container .newsletter-button {
+  margin-top: 0 !important;
+}
+
+.app-header-container .app-header .header-link-right-container .logout-button {
+  margin-top: 6rem !important;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+  width: 50%;
+  background: #00ff85;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container {
+  height: auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-title {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  pointer-events: none;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 3px solid #38003c;
+  transition: all 0.3s;
+  padding: 10px;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-close:before {
+  content: '';
+  width: 80%;
+  height: 3px;
+  background: #38003c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-close:after {
+  content: '';
+  width: 80%;
+  height: 3px;
+  background: #38003c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-close:hover {
+  background: #38003c;
+  border-color: #00ff85;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-close:hover:before {
+  background: #00ff85;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-close:hover:after {
+  background: #00ff85;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .log-in-form .log-in-input {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 10px;
+}
+
+.app-header-container .app-header .header-link-right-container .header-log-in-container .log-in-container .submit-button {
+  background: #38003c;
+  border: 1px solid #38003c;
+  color: white;
+  height: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-family: "Merriweather", serif;
+}
+
+.app-header-container .app-header .header-link-right-container .header-link {
+  width: 50px;
+  height: 25px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  transform: rotate(33deg);
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.2s;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.app-header-container .app-header .header-link-right-container .header-link:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+}
+
+.app-header-container .app-header .header-link-right-container:hover {
+  background: #00ff85;
+}
+
+.app-header-container .app-header .header-link-right-container:hover .header-link {
+  border-color: #38003c;
+}
+
+.app-header-container .app-header .header-link-right-container:hover .header-link:after {
+  background: #38003c;
 }
 
 .app-header-container .app-header .header-link-right-container-logout {
@@ -10464,109 +10884,6 @@ h2 {
 
 .app-header-container .app-header .header-link-right-container-logout:hover .header-link {
   color: #38003c;
-}
-
-.app-header-container .app-header .header-link-left-container-account {
-  background: #38003c;
-  height: 100%;
-  width: 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 0%);
-  display: flex;
-  padding-left: 40px;
-  transition: all 0.4s;
-  cursor: pointer;
-}
-
-.app-header-container .app-header .header-link-left-container-account .header-link {
-  color: white;
-  font-weight: bold;
-  width: 100%;
-  transform: rotate(-33deg);
-  transition: all 0.2s;
-  visibility: visible;
-  opacity: 1;
-}
-
-.app-header-container .app-header .header-link-left-container-account:hover {
-  background: #00ff85;
-}
-
-.app-header-container .app-header .header-link-left-container-account:hover .header-link {
-  color: #38003c;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container {
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container .sign-up-title {
-  display: block;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  pointer-events: none;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container .sign-up-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container .sign-up-form .sign-up-input {
-  height: 2.5rem;
-  margin-bottom: 1rem;
-  padding-left: 10px;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container .submit-button {
-  background: #38003c;
-  border: 1px solid #38003c;
-  color: white;
-  height: 2rem;
-  width: 100%;
-  margin-top: 2rem;
-  cursor: pointer;
-  font-family: "Oswald", sans-serif;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container .account-close {
-  cursor: pointer;
-  padding: 6px;
-  border: 2px solid #38003c;
-  border-radius: 100%;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  transition: all 0.3s;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: #38003c;
-  pointer-events: all;
-}
-
-.app-header-container .app-header .header-link-left-container-account .sign-up-container .account-close:hover {
-  color: #00ff85;
-  border-color: #38003c;
-  background: #38003c;
 }
 
 .app-header-container .app-header .header-title-container {
@@ -10611,13 +10928,13 @@ h2 {
 
 .app-header-container .app-header .header-title-container .header-section .hs-header .hs-header-button {
   text-align: center;
-  height: 4rem;
+  height: 3.5rem;
   width: 16rem;
   background: #38003c;
   border: 1px solid #00ff85;
   color: white;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Merriweather", serif;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -10640,6 +10957,7 @@ h2 {
   padding-left: 40px;
   transition: all 0.4s;
   cursor: pointer;
+  font-family: "Merriweather", serif;
 }
 
 .app-header-container .app-header .header-link-left-container-back .header-link {
@@ -10668,15 +10986,16 @@ h2 {
   background: rgba(0, 0, 0, 0.4);
   color: white;
   padding: 15px;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 50%;
-  width: 50%;
+  width: 80%;
   transform: translateX(-50%);
   font-size: 12px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  z-index: 10000;
 }
 
 .cookie .cookie-button {
@@ -10684,7 +11003,7 @@ h2 {
   border: 1px solid #00ff85;
   color: white;
   cursor: pointer;
-  margin-left: 3px;
+  margin-left: 20px;
 }
 
 .cookie .cookie-link {
@@ -10692,18 +11011,10 @@ h2 {
   cursor: pointer;
 }
 
-.expand-left {
-  background: white !important;
-  height: 500px !important;
-  width: 350px !important;
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
-  padding: 40px !important;
-}
-
 .expand-right {
-  background: white !important;
-  height: 300px !important;
-  width: 300px !important;
+  background: transparent !important;
+  height: 500px !important;
+  width: 600px !important;
   padding: 40px !important;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
 }

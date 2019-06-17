@@ -219,6 +219,44 @@
     }
   }
 
+  .section-2 {
+    padding: 6rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $primary;
+
+    .s2-title {
+      margin-bottom: 2rem;
+      color: $white;
+    }
+
+    .betting-history-container {
+      width: 100%;
+      height: 14rem;
+      font-family: $oswald;
+
+      .betting-history {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        padding: 2rem;
+        background: $white;
+        border: 3px solid $secondary;
+        border-radius: 5px;
+
+        .bet {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          color: $primary;
+        }
+      }
+    }
+  }
+
   .section-contact {
     padding: 6rem 12rem;
     background: white;
@@ -245,7 +283,7 @@
 
       .sc-button {
         text-align: center;
-        height: 4rem;
+        height: 3.5rem;
         width: 16rem;
         background: $primary;
         border: 1px solid $secondary;
@@ -324,29 +362,55 @@
           justify-content: space-between;
 
           .sc-form-close {
-            cursor: pointer;
-            padding: 10px;
-            border: 2px solid white;
-            border-radius: 100%;
-            font-weight: bold;
-            width: 45px;
             height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 45px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 100%;
+            border: 3px solid $white;
+            position: relative;
             background: $primary;
             transition: all 0.3s;
 
+            &:before {
+              content: '';
+              width: 80%;
+              height: 3px;
+              background: $white;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%) rotate(45deg);
+            }
+
+            &:after {
+              content: '';
+              width: 80%;
+              height: 3px;
+              background: $white;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%) rotate(-45deg);
+            }
+
             &:hover {
-              color: $primary;
               border-color: $primary;
               background: $secondary;
+
+              &:after {
+                background: $primary;
+              }
+
+              &:before {
+                background: $primary;
+              }
             }
           }
 
           .sc-form-button {
             text-align: center;
-            height: 4rem;
+            height: 3.5rem;
             width: 16rem;
             background: $secondary;
             color: $primary;

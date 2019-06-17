@@ -343,6 +343,7 @@
     align-items: center;
     justify-content: center;
     border-top: 3px solid $primary;
+    padding-bottom: 6rem;
 
     .odds-container-outter {
       width: 100%;
@@ -366,7 +367,7 @@
 
     .bet-button-container {
       width: 100%;
-      height: 4rem;
+      height: 3.5rem;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -383,6 +384,13 @@
         background: $secondary;
         transition: all 0.3s;
         border: 3px solid $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+          margin: 0;
+        }
 
         &:hover {
           color: $white;
@@ -414,6 +422,49 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      .betting-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .bet-team {
+          margin-bottom: 2rem;
+        }
+
+        .col-6 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .submit-button {
+        height: 3rem;
+        border: none;
+        border-radius: 5px;
+        color: $primary;
+        width: 8rem;
+        cursor: pointer;
+        background: $secondary;
+        transition: all 0.3s;
+        border: 3px solid $primary;
+        font-family: $oswald;
+        margin-bottom: 1rem;
+
+        &:hover {
+          color: $white;
+          background: $primary;
+          border: 3px solid $secondary;
+        }
+      }
+
+      .draw {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     .betting-choices-button-close {
@@ -428,6 +479,29 @@
       cursor: pointer;
       transition: all 0.3s;
       margin-top: 1rem;
+
+      &:hover {
+        background: $secondary;
+        color: $primary;
+        border-color: $primary;
+      }
+    }
+
+    .betting-choices-button-bet {
+      text-align: center;
+      height: 3rem;
+      width: 12rem;
+      background: $primary;
+      color: $white;
+      border: 1px solid $secondary;
+      font-weight: bold;
+      font-family: $oswald;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 1rem;
+      font-size: 21px;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
 
       &:hover {
         background: $secondary;
