@@ -81,6 +81,8 @@
           height: auto;
           width: 100%;
           padding: 40px 20px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
 
           .sign-up-title {
             display: block;
@@ -101,6 +103,7 @@
               height: 2.5rem;
               margin-bottom: 1rem;
               padding-left: 10px;
+              background: rgba(255,255,255,0.9)
             }
           }
 
@@ -179,11 +182,11 @@
             border-radius: 100%;
             border: 3px solid $primary;
             transition: all 0.3s;
-            padding: 10px;
+            padding: 15px;
 
             &:before {
               content: '';
-              width: 80%;
+              width: 70%;
               height: 3px;
               background: $primary;
               position: absolute;
@@ -194,7 +197,7 @@
 
             &:after {
               content: '';
-              width: 80%;
+              width: 70%;
               height: 3px;
               background: $primary;
               position: absolute;
@@ -226,6 +229,7 @@
               height: 2.5rem;
               margin-bottom: 1rem;
               padding-left: 10px;
+              background: rgba(255,255,255,0.9)
             }
           }
 
@@ -243,10 +247,8 @@
       }
 
       .header-link {
-        width: 50px;
+        width: 100px;
         height: 25px;
-        border-bottom: 3px solid white;
-        border-top: 3px solid white;
         transform: rotate(33deg);
         display: flex;
         justify-content: flex-end;
@@ -254,31 +256,23 @@
         visibility: visible;
         opacity: 1;
         position: absolute;
-        top: 25%;
-        right: 25%;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 30%;
+        right: 10%;
+        font-family: $oswald;
 
-        &:after {
-          content: '';
-          width: 100%;
-          height: 3px;
-          background: $white;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translateY(-50%);
-          transition: all 0.2s;
-        }
       }
 
       &:hover {
         background: $secondary;
+        color: $primary;
 
         .header-link {
           border-color: $primary;
-
-          &:after {
-            background: $primary;
-          }
+          color: $primary;
         }
       }
 
@@ -459,5 +453,20 @@
   padding: 40px!important;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
 
+  .header-sign-up-container {
+    background: rgba(0, 255, 133, 0.7) !important;
+  }
+
+  .header-log-in-container {
+    background: rgba(0, 255, 133, 0.7) !important;
+  }
+
 }
 
+.green {
+  background: $secondary !important;
+}
+
+.purple {
+  background: $primary !important;
+}
