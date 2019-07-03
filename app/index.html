@@ -30,21 +30,6 @@
     <header class="app-header">
       <div class="header-link-right-container">
         <div class="header-link">Logga In</div>
-        <div class="header-sign-up-container">
-          <span class="header-link">Sign Up</span>
-          <div class="sign-up-container">
-            <span class="sign-up-title">Sign Up</span>
-            <form class="sign-up-form">
-              <input class="sign-up-input" type="text" placeholder="First Name">
-              <input class="sign-up-input" type="text" placeholder="Last Name">
-              <input class="sign-up-input" type="email" placeholder="Email">
-              <input class="sign-up-input" type="password" placeholder="Password">
-              <input class="sign-up-input" type="password" placeholder="Repeat Password">
-            </form>
-            <span class="user-agreement-span">By clicking "Submit" you agree to Top Tip Team <strong>User Agreement</strong>,<strong>Privacy Policy</strong> and <strong>Cookie Policy</strong></span>
-            <button id="signup-button" class="submit-button">SIGN UP</button>
-          </div>
-        </div>
         <div class="header-log-in-container">
           <span class="header-link">Log In</span>
           <div class="log-in-container">
@@ -52,8 +37,9 @@
             <form class="log-in-form">
               <input class="log-in-input" type="text" placeholder="Username">
               <input class="log-in-input" type="password" placeholder="Password">
+              <input class="log-in-input" type="password" placeholder="Repeat Password">
             </form>
-            <button id="login-button" class="submit-button">LOG IN</button>
+            <button id="login-button" class="submit-button">LOG IN / REGISTER</button>
             <div class="log-in-close"></div>
           </div>
         </div>
@@ -110,9 +96,9 @@
           <div class="hs-border-container rounded-hover">
             <div class="hs-content-container">
               <div class="hs-title-container ">
-                <h2 class="hs-title">Rekommendationer</h2>
+                <h2 class="hs-title">Rekommen<br class="rounded-break">dationer</h2>
               </div>
-              <span class="hs-text">Beroende på situation<br>du får ett fåtal betting rekommendationer<br>baserat på situationer i matchen utifrån<br> vad som händer på planen samt hur din <br>aktuella insats står mot det.</span>
+              <span class="hs-text">Beroende på situation du får<br class="rounded-break-text"> ett fåtal betting rekommendationer<br class="rounded-break">baserat på situationer <br class="rounded-break-text"> i matchen utifrån vad<br class="rounded-break-text"> som händer på planen samt hur din <br class="rounded-break-text">aktuella insats står mot det.</span>
             </div>
           </div>
         </div>
@@ -332,17 +318,22 @@
     let top2 = $('.section-2').offset().top;
     let top3 = $('.section-3').offset().top;
     let top4 = $('.section-4').offset().top;
-    let top5 = $('.section-5').offset().top;
+    let top5 = $('.app-footer-container').offset().top;
+    let top6 = $('.footer-image-container').offset().top;
 
-    $(document).scroll(function() {
+    $(window).scroll(function() {
       let scrollPos = $(document).scrollTop();
       if (scrollPos >= top2 && scrollPos < top3) {
         $('.header-link-right-container').addClass('green');
         $('.header-link-right-container').removeClass('purple');
-
-      } else if (scrollPos >= top3 && scrollPos < top4) {
+      }
+      else if (scrollPos >= top3 && scrollPos < top4) {
         $('.header-link-right-container').removeClass('green');
         $('.header-link-right-container').addClass('purple');
+      }
+      else if (scrollPos >= top5 && scrollPos < top6) {
+        $('.header-link-right-container').addClass('green');
+        $('.header-link-right-container').removeClass('purple');
       }
       else {
         $('.header-link-right-container').removeClass('green');

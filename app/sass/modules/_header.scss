@@ -8,35 +8,49 @@
   z-index: 998;
 
   .app-header {
-    height: 130px;
-    min-height: 130px;
+    height: 80px;
+    min-height: 80px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background: transparent;
 
+    @media only screen and (min-width: 1200px){
+    height: 130px;
+    min-height: 130px;
+  }
+
     .header-link-left-container {
       background: $primary;
       height: 100%;
-      width: 200px;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 0%);
+      clip-path: none;
       display: flex;
       padding-left: 40px;
       transition: all 0.4s;
       cursor: pointer;
 
+      @media only screen and (min-width: 1200px) {
+      clip-path: polygon(100% 0%, 100% 0%, 0% 100%, 0% 0%);
+      width: 200px;
+    }
+
       .header-link {
         color:white;
         font-weight: bold;
         width: 100%;
-        transform: rotate(-33deg);
+        transform: rotate(0deg);
         transition: all 0.2s;
         visibility: visible;
         opacity: 1;
+
+        @media only screen and (min-width: 1200px){
+        transform: rotate(-33deg);
+      }
       }
 
       &:hover {
@@ -51,15 +65,23 @@
     .header-link-right-container {
       background: $primary;
       height: 100%;
-      width: 200px;
+      width: 100%;
       position: absolute;
       top: 0;
       right: 0;
-      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+      clip-path: none;
       display: flex;
-      padding-right: 50px;
+      padding-right: 0;
       transition: all 0.3s;
       cursor: pointer;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (min-width: 1200px){
+      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+      width: 200px;
+      padding-right: 50px;
+    }
 
       .change-title {
         font-family: $oswald;
@@ -154,8 +176,12 @@
         top: 0;
         right: 0;
         height: auto;
-        width: 50%;
+        width: 100%;
         background: $secondary;
+
+        @media only screen and (min-width: 1200px){
+          width: 50%;
+        }
 
         .log-in-container {
           height: auto;
@@ -247,22 +273,32 @@
       }
 
       .header-link {
+        width: 100%;
+        height: 25px;
+        transform: rotate(0deg);
+        display: flex;
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: auto;
+        right: auto;
+        font-family: $oswald;
+
+        @media only screen and (min-width: 1200px) {
         width: 100px;
         height: 25px;
         transform: rotate(33deg);
         display: flex;
         justify-content: flex-end;
-        transition: all 0.2s;
-        visibility: visible;
-        opacity: 1;
         position: absolute;
-        color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         top: 30%;
         right: 10%;
-        font-family: $oswald;
+      }
 
       }
 
@@ -430,6 +466,7 @@
   visibility: hidden;
   transition: all 0.3s;
   z-index: 10000;
+  max-width: 1140px;
 
   .cookie-button {
     background: $primary;
@@ -449,10 +486,14 @@
 .expand-right {
   background: transparent !important;
   height: 500px !important;
-  width: 600px !important;
+  width: 100% !important;
   padding: 40px!important;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%) !important;
 
+  @media only screen and (min-width: 1200px){
+    height: 500px !important;
+    width: 600px !important;
+  }
   .header-sign-up-container {
     background: rgba(0, 255, 133, 0.7) !important;
   }

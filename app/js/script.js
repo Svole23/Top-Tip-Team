@@ -145,7 +145,7 @@ $(document).ready(function () {
   });
 
   var animation1 = new TimelineMax();
-  animation1.from("#horizontal-1", 1, { y:-100, borderColor: 'transparent' }, 0)
+  animation1.from("#horizontal-1", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
   animation1.pause()
 
   var animation2 = new TimelineMax();
@@ -153,7 +153,7 @@ $(document).ready(function () {
   animation2.pause()
 
   var animation3 = new TimelineMax();
-  animation3.from("#horizontal-2", 1, { y:-100, borderColor: 'transparent' }, 0)
+  animation3.from("#horizontal-2", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
   animation3.pause()
 
   var animation4 = new TimelineMax();
@@ -161,7 +161,7 @@ $(document).ready(function () {
   animation4.pause()
 
   var animation5 = new TimelineMax();
-  animation5.from("#horizontal-3", 1, { y:-100, borderColor: 'transparent' }, 0)
+  animation5.from("#horizontal-3", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
   animation5.pause()
 
   var animation6 = new TimelineMax();
@@ -169,7 +169,7 @@ $(document).ready(function () {
   animation6.pause()
 
   var animation7 = new TimelineMax();
-  animation7.from("#horizontal-4", 1, { y:-100, borderColor: 'transparent' }, 0)
+  animation7.from("#horizontal-4", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
   animation7.pause()
 
   var animation8 = new TimelineMax();
@@ -201,6 +201,7 @@ $(document).ready(function () {
       animation7.play()
       animation8.play()
     }
+
 
   });
 });
