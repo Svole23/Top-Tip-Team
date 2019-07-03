@@ -48,6 +48,14 @@ $(document).ready(function () {
     $(".disclaimer-container").addClass("show")
   });
 
+  $(".s2-betting-button").click(function(){
+    $(".betting-history-container").addClass("show")
+  });
+
+  $(".bh-button-close").click(function(){
+    $(".betting-history-container").removeClass("show")
+  });
+
   $(".disclaimer-button-close").click(function(){
     $(".disclaimer-container").removeClass("show")
   });
@@ -142,66 +150,5 @@ $(document).ready(function () {
 
   $(".match-list-link").click(function(){
     window.location.href='match.html';
-  });
-
-  var animation1 = new TimelineMax();
-  animation1.from("#horizontal-1", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
-  animation1.pause()
-
-  var animation2 = new TimelineMax();
-  animation2.from("#horizontal-1 .hs-content-container", 0.5, { opacity: 0 }, 0.5)
-  animation2.pause()
-
-  var animation3 = new TimelineMax();
-  animation3.from("#horizontal-2", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
-  animation3.pause()
-
-  var animation4 = new TimelineMax();
-  animation4.from("#horizontal-2 .hs-content-container", 0.5, { opacity: 0 }, 0.5)
-  animation4.pause()
-
-  var animation5 = new TimelineMax();
-  animation5.from("#horizontal-3", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
-  animation5.pause()
-
-  var animation6 = new TimelineMax();
-  animation6.from("#horizontal-3 .hs-content-container",0.5, { opacity: 0 }, 0.5)
-  animation6.pause()
-
-  var animation7 = new TimelineMax();
-  animation7.from("#horizontal-4", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
-  animation7.pause()
-
-  var animation8 = new TimelineMax();
-  animation8.from("#horizontal-4 .hs-content-container",0.5, { opacity: 0 }, 0.5)
-  animation8.pause()
-
-  $(window).scroll(function() {
-    var top1 = $("#horizontal-1").offset().top;
-    var bottom1 = $("#horizontal-1").offset().top + $("#horizontal-1").outerHeight();
-    var top2 = $("#horizontal-2").offset().top;
-    var bottom2 = $("#horizontal-2").offset().top + $("#horizontal-2").outerHeight();
-    var top3 = $("#horizontal-3").offset().top;
-    var bottom3 = $("#horizontal-3").offset().top + $("#horizontal-3").outerHeight();
-    var top4 = $("#horizontal-4").offset().top;
-    var bottom4 = $("#horizontal-4").offset().top + $("#horizontal-4").outerHeight();
-    var screen_bottom = $(window).scrollTop() + $(window).innerHeight();
-    var screen_top = $(window).scrollTop();
-
-    if ((screen_bottom > top1) && (screen_top < bottom1)){
-      animation1.play()
-      animation2.play()
-      animation3.play()
-      animation4.play()
-    }
-
-    if((screen_bottom > top3) && (screen_top < bottom3)) {
-      animation5.play()
-      animation6.play()
-      animation7.play()
-      animation8.play()
-    }
-
-
   });
 });

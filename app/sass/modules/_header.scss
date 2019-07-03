@@ -76,12 +76,14 @@
       cursor: pointer;
       align-items: center;
       justify-content: center;
+      border-bottom: 2px solid $secondary;
 
       @media only screen and (min-width: 1200px){
-      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
-      width: 200px;
-      padding-right: 50px;
-    }
+        clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 0%);
+        width: 200px;
+        padding-right: 50px;
+        border-bottom: 0;
+      }
 
       .change-title {
         font-family: $oswald;
@@ -290,16 +292,15 @@
         font-family: $oswald;
 
         @media only screen and (min-width: 1200px) {
-        width: 100px;
-        height: 25px;
-        transform: rotate(33deg);
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        top: 30%;
-        right: 10%;
-      }
-
+          width: 100px;
+          height: 25px;
+          transform: rotate(33deg);
+          display: flex;
+          justify-content: flex-end;
+          position: absolute;
+          top: 30%;
+          right: 10%;
+        }
       }
 
       &:hover {
@@ -382,6 +383,16 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+
+        @media only screen and (min-width: 1200px) {
+          position: relative;
+          top: auto;
+
+        }
+
 
         .hs-header {
           width: 100%;
@@ -394,7 +405,7 @@
           .hs-header-button {
             text-align: center;
             height: 3.5rem;
-            width: 16rem;
+            width: 50%;
             background: $primary;
             border: 1px solid $secondary;
             color: white;
@@ -402,6 +413,15 @@
             font-family: $oswald;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 12px;
+            margin: 20px;
+
+            @media only screen and (min-width: 1200px) {
+              height: 3.5rem;
+              width: 16rem;
+              margin: 0;
+              font-size: initial;
+            }
 
             &:hover {
               background: $secondary;

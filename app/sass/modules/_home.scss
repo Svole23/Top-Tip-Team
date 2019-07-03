@@ -1,5 +1,6 @@
 
 .home {
+  overflow-y: hidden;
   .section-1 {
     height: auto;
     width: 100%;
@@ -105,10 +106,16 @@
     }
 
     #section-1-sample {
-      background: $primary-transparent;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: white;
+      text-decoration: underline;
 
       &:hover {
-        background: $secondary-transparent;
+        background: transparent;
+        border: none;
+        color: white;
       }
     }
   }
@@ -399,181 +406,6 @@
       }
     }
   }
-
-  .section-contact {
-    padding: 6rem 12rem;
-    background: white;
-    color: $primary;
-    position: relative;
-    padding-bottom: 8rem;
-
-    .sc-content-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      .sc-title {
-        text-align: center;
-        margin-bottom: 3rem;
-        font-size: 42px;
-      }
-
-      .sc-text {
-        text-align: center;
-      }
-
-      .sc-button {
-        text-align: center;
-        height: 3.5rem;
-        width: 16rem;
-        background: $primary;
-        border: 1px solid $secondary;
-        color: $white;
-        font-weight: bold;
-        font-family: $oswald;
-        margin-top: 2rem;
-        cursor: pointer;
-        transition: all 0.3s;
-
-        &:hover {
-          background: $secondary;
-          color: $primary;
-          border-color: $primary;
-        }
-      }
-    }
-
-    .sc-form-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      opacity: 0;
-      visibility: hidden;
-      padding: 0 12rem;
-      background: $primary;
-      color: white;
-      transition: all 0.5s;
-      justify-content: center;
-      align-items: center;
-
-      .sc-form {
-        height: 100%;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        padding-left: 2rem;
-        padding-right: 2rem;
-
-        .sc-input-container {
-          margin-bottom: 2rem;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-
-          .sc-form-text {
-            width: 24rem;
-            height: 2.5rem;
-            margin-bottom: 1rem;
-            padding: 10px 5px;
-          }
-        }
-
-        .sc-form-textarea {
-          width: 24rem;
-          resize: none;
-          height: 6rem;
-          padding: 10px 5px;
-        }
-
-        .buttons-container {
-          margin-top: 2rem;
-          width: 24rem;
-          height: auto;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-
-          .sc-form-close {
-            height: 45px;
-            width: 45px;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 100%;
-            border: 3px solid $white;
-            position: relative;
-            background: $primary;
-            transition: all 0.3s;
-
-            &:before {
-              content: '';
-              width: 80%;
-              height: 3px;
-              background: $white;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%,-50%) rotate(45deg);
-            }
-
-            &:after {
-              content: '';
-              width: 80%;
-              height: 3px;
-              background: $white;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%,-50%) rotate(-45deg);
-            }
-
-            &:hover {
-              border-color: $primary;
-              background: $secondary;
-
-              &:after {
-                background: $primary;
-              }
-
-              &:before {
-                background: $primary;
-              }
-            }
-          }
-
-          .sc-form-button {
-            text-align: center;
-            height: 3.5rem;
-            width: 16rem;
-            background: $secondary;
-            color: $primary;
-            border: 1px solid $primary;
-            font-weight: bold;
-            font-family: $oswald;
-            cursor: pointer;
-            transition: all 0.3s;
-
-            &:hover {
-              background: $primary;
-              color: $white;
-              border-color: $secondary;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 #pinContainer {
@@ -595,5 +427,20 @@
   float: left;
 }
 
+#video {
+  z-index: 998;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  align-self: center;
+
+  @media only screen and (min-width: 1200px){
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    min-width: 100vw;
+    min-height: 40vh;
+  }
+}
 
 
