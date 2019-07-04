@@ -30,21 +30,6 @@
     <header class="app-header">
       <div class="header-link-right-container">
         <div class="header-link">Logga In</div>
-        <div class="header-sign-up-container">
-          <span class="header-link">Sign Up</span>
-          <div class="sign-up-container">
-            <span class="sign-up-title">Sign Up</span>
-            <form class="sign-up-form">
-              <input class="sign-up-input" type="text" placeholder="First Name">
-              <input class="sign-up-input" type="text" placeholder="Last Name">
-              <input class="sign-up-input" type="email" placeholder="Email">
-              <input class="sign-up-input" type="password" placeholder="Password">
-              <input class="sign-up-input" type="password" placeholder="Repeat Password">
-            </form>
-            <span class="user-agreement-span">By clicking "Submit" you agree to Top Tip Team <strong>User Agreement</strong>,<strong>Privacy Policy</strong> and <strong>Cookie Policy</strong></span>
-            <button id="signup-button" class="submit-button">SIGN UP</button>
-          </div>
-        </div>
         <div class="header-log-in-container">
           <span class="header-link">Log In</span>
           <div class="log-in-container">
@@ -52,8 +37,9 @@
             <form class="log-in-form">
               <input class="log-in-input" type="text" placeholder="Username">
               <input class="log-in-input" type="password" placeholder="Password">
+              <input class="log-in-input" type="password" placeholder="Repeat Password">
             </form>
-            <button id="login-button" class="submit-button">LOG IN</button>
+            <button id="login-button" class="submit-button">LOG IN / REGISTER</button>
             <div class="log-in-close"></div>
           </div>
         </div>
@@ -78,6 +64,11 @@
           <h2 class="s2-title">Smidig fotbollsbetting som det bör vara.</h2>
           <p class="s2-text">Vi hos Top Tip Team tycker att betting idag är onödigt långsamt, komplicerat och krångligt. Det finns fler än hundrafemtio olika sätt att satsa pengar på en fotbollsmatch. Målskillnad, halvtidsresultat, spelare som gör första målet, dubbla vinster eller slutresultat är bara några exempel från en alldeles för lång lista av bettingmöjligheter. I slutändan kommer alla matcher att sluta med vinst, oavgjort eller förlust, alltså motsvarande 1 X 2.</p>
         </div>
+    </div>
+    <div class="section-video">
+      <video autoplay muted loop id="video" controls>
+        <source src="../images/1BTLT.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="section-3">
       <div id="s3-content-container" class="s3-content-container">
@@ -110,9 +101,9 @@
           <div class="hs-border-container rounded-hover">
             <div class="hs-content-container">
               <div class="hs-title-container ">
-                <h2 class="hs-title">Rekommendationer</h2>
+                <h2 class="hs-title">Rekommen<br class="rounded-break">dationer</h2>
               </div>
-              <span class="hs-text">Beroende på situation<br>du får ett fåtal betting rekommendationer<br>baserat på situationer i matchen utifrån<br> vad som händer på planen samt hur din <br>aktuella insats står mot det.</span>
+              <span class="hs-text">Beroende på situation du får<br class="rounded-break-text"> ett fåtal betting rekommendationer<br class="rounded-break">baserat på situationer <br class="rounded-break-text"> i matchen utifrån vad<br class="rounded-break-text"> som händer på planen samt hur din <br class="rounded-break-text">aktuella insats står mot det.</span>
             </div>
           </div>
         </div>
@@ -332,21 +323,85 @@
     let top2 = $('.section-2').offset().top;
     let top3 = $('.section-3').offset().top;
     let top4 = $('.section-4').offset().top;
-    let top5 = $('.section-5').offset().top;
+    let top5 = $('.app-footer-container').offset().top;
+    let top6 = $('.footer-image-container').offset().top;
 
-    $(document).scroll(function() {
+    $(window).scroll(function() {
       let scrollPos = $(document).scrollTop();
       if (scrollPos >= top2 && scrollPos < top3) {
         $('.header-link-right-container').addClass('green');
         $('.header-link-right-container').removeClass('purple');
-
-      } else if (scrollPos >= top3 && scrollPos < top4) {
+      }
+      else if (scrollPos >= top3 && scrollPos < top4) {
         $('.header-link-right-container').removeClass('green');
         $('.header-link-right-container').addClass('purple');
+      }
+      else if (scrollPos >= top5 && scrollPos < top6) {
+        $('.header-link-right-container').addClass('green');
+        $('.header-link-right-container').removeClass('purple');
       }
       else {
         $('.header-link-right-container').removeClass('green');
         $('.header-link-right-container').removeClass('purple');
+      }
+    });
+
+    var animation1 = new TimelineMax();
+    animation1.from("#horizontal-1", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
+    animation1.pause()
+
+    var animation2 = new TimelineMax();
+    animation2.from("#horizontal-1 .hs-content-container", 0.5, { opacity: 0 }, 0.5)
+    animation2.pause()
+
+    var animation3 = new TimelineMax();
+    animation3.from("#horizontal-2", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
+    animation3.pause()
+
+    var animation4 = new TimelineMax();
+    animation4.from("#horizontal-2 .hs-content-container", 0.5, { opacity: 0 }, 0.5)
+    animation4.pause()
+
+    var animation5 = new TimelineMax();
+    animation5.from("#horizontal-3", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
+    animation5.pause()
+
+    var animation6 = new TimelineMax();
+    animation6.from("#horizontal-3 .hs-content-container",0.5, { opacity: 0 }, 0.5)
+    animation6.pause()
+
+    var animation7 = new TimelineMax();
+    animation7.from("#horizontal-4", 1.5, { y:-200, opacity: 0, borderColor: 'transparent' }, 0)
+    animation7.pause()
+
+    var animation8 = new TimelineMax();
+    animation8.from("#horizontal-4 .hs-content-container",0.5, { opacity: 0 }, 0.5)
+    animation8.pause()
+
+    $(window).scroll(function() {
+      var top1 = $("#horizontal-1").offset().top;
+      var bottom1 = $("#horizontal-1").offset().top + $("#horizontal-1").outerHeight();
+      var top2 = $("#horizontal-2").offset().top;
+      var bottom2 = $("#horizontal-2").offset().top + $("#horizontal-2").outerHeight();
+      var top3 = $("#horizontal-3").offset().top;
+      var bottom3 = $("#horizontal-3").offset().top + $("#horizontal-3").outerHeight();
+      var top4 = $("#horizontal-4").offset().top;
+      var bottom4 = $("#horizontal-4").offset().top + $("#horizontal-4").outerHeight();
+      var screen_bottom = $(window).scrollTop() + $(window).innerHeight();
+      var screen_top = $(window).scrollTop();
+
+      if ((screen_bottom > top1) && (screen_top < bottom1)){
+        animation1.play()
+        animation2.play()
+        animation3.play()
+        animation4.play()
+      }
+
+      if((screen_bottom > top3) && (screen_top < bottom3)) {
+        animation5.play()
+        animation6.play()
+        animation7.play()
+        animation8.play()
       }
     });
   });
